@@ -24,7 +24,19 @@
 .tabs a:hover{
 	transform: scale(1.2);
 	text-decoration: none;
+}
 
+@keyframes fade-in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+div.xp-item{
+	animation: fade-in 600ms ease;
 }
 
 .xp-item{
@@ -35,11 +47,11 @@
 	height: var(--xp-card-size-h);
 	width: var(--xp-card-size-w);
 
-	background-color: #151515;
-	border-radius: 20px;
-
 	transition: border-radius background-color display opacity;
 	transition-duration: 200ms;
+
+	background-color: #151515;
+	border-radius: 20px;
 
 	padding: 10px;
 	grid-template-columns: 3fr 5fr;
