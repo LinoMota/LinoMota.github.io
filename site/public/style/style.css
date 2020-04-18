@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: Shanti;
+    src: url(../font/Shanti-Regular.ttf);
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+    
+}
+
+.site{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    appearance :none;
+    flex: 1;
+}
+
+main{
+    font-family: 'Shanti', 'Roboto', 'Veranda',sans-serif;
+    min-height: 70vh;
+    flex: 9;
+}
+
+/* .menu .item.web::before{
+    content: "🌐";
+}
+.menu .item.backend::before{
+    content: "🖥️";
+}
+.menu .item.tools::before{
+    content: "⚒️";
+} */
+
+
+main .content{
+    flex: 8;
+    width: 90vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+footer{
+    flex: 1;
+    height: 4rem; 
+    margin-top:2%;
+}
+
+h1{
+    color: white;
+    font-size: 15em;
+    text-align: center;
+}
+
+div.socialmedia{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmedia div {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    transition: transform;
+    transition-duration: 200ms;
+    background-size: 100% 100%;
+}
+.socialmedia div:hover {
+    transform: scale(1.5) translate(0,-10px);
+}
+
+.socialmedia div.instagram{
+    background-image: url(../img/socialmedia/instagram1.svg);
+}
+.socialmedia div.email{
+    background-image: url(../img/socialmedia/email.svg);
+}
+.socialmedia div.linkedin{
+    background-image: url(../img/socialmedia/linkedin.svg);
+}
+.socialmedia div.github{
+    background-image: url(../img/socialmedia/github.svg);
+}

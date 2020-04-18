@@ -1,0 +1,94 @@
+/* *{padding: 0; margin: 0;} */
+@font-face {
+	font-family: funnyDuck;
+	src: url(./../font/FunnyDuck-mv12.ttf);
+}
+	
+:root{
+	--font : 0.4em;
+	--left-l-font: 0.45em;
+	--gradient : linear-gradient(45deg,#9bc8b1 10%,#f59d8c 35%,#96bbdf);
+}
+
+.brand{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: funnyDuck, Arial, Helvetica, sans-serif;
+	font-size: var(--font);
+	height: 100%;
+	background-color: black;
+}
+
+#logo{
+	width: 80%;
+	background-image: var(--gradient);
+	background-size: 300% 300%;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+#logo::before{
+	content: "{";
+}
+
+#logo::after{
+	background-image: var(--gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+	background-size: 300% 300%;
+
+	transition: transform background-position;
+	transition-duration: 0.3s;
+
+	display: inline-block;
+	font-size: var(--left-l-font);
+	transform: translate(-150%,25%) rotate(90deg)  ; 
+	content: "}";
+}
+
+#logo:hover::after{
+	background-position: bottom;
+	font-size: calc(var(--font)*2.5);
+	transform: translate(0,0) rotate(0)  ; 
+}
+
+#logo span{
+	display: inline-block;
+	min-width: 10px;
+	height: 70%;
+}
+
+#logo span::after{
+
+	background-position: top;
+	background-image: var(--gradient);
+	background-size: 300% 300%;
+	-webkit-background-clip: text;
+	color: transparent;
+
+	transition: content width color font-size;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	font-size : 0;
+}
+
+#logo span::after{
+	animation: 10s ease 0.5s infinite alternate gradient;
+	content: "Lino Mota";
+}
+
+#logo:hover span::after{
+	font-size: calc(var(--font)*2.5);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
