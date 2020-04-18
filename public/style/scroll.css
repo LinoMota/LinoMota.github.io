@@ -3,7 +3,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgb(78, 78, 78);
 }
 
 ::-webkit-scrollbar-thumb:hover {
