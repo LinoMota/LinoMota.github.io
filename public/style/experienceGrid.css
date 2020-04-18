@@ -69,6 +69,8 @@ div.xp-item{
 .xp-image{
 	grid-area: image;
 	text-align: center;
+	
+	animation: fade-in 2s ease;
 }
 .xp-image img{
 	max-width: 80px;
@@ -81,6 +83,8 @@ div.xp-item{
 .xp-title{
 	grid-area: title;
 	font-size: x-large;
+	
+	animation: fade-in 2s ease;
 }
 
 .xp-desc{
@@ -90,6 +94,8 @@ div.xp-item{
 	text-align: left;
 	vertical-align: top;
 	line-height: 1.25em;
+	
+	animation: fade-in 2s ease;
 }
 
 .item-list{
