@@ -36,7 +36,7 @@
 }
 
 div.xp-item{
-	animation: fade-in 2s ease;
+	animation: fade-in 1.5s ease;
 }
 
 .xp-item{
@@ -70,7 +70,7 @@ div.xp-item{
 	grid-area: image;
 	text-align: center;
 	
-	animation: fade-in 2s ease;
+	animation: fade-in 1.5s ease;
 }
 .xp-image img{
 	max-width: 80px;
@@ -84,7 +84,7 @@ div.xp-item{
 	grid-area: title;
 	font-size: x-large;
 	
-	animation: fade-in 2s ease;
+	animation: fade-in 1.5s ease;
 }
 
 .xp-desc{
@@ -95,7 +95,7 @@ div.xp-item{
 	vertical-align: top;
 	line-height: 1.25em;
 	
-	animation: fade-in 2s ease;
+	animation: fade-in 1.5s ease;
 }
 
 .item-list{
