@@ -145,7 +145,7 @@ let listDiv = document.querySelector('.item-list');
 
 webList.forEach( (item) => {
 	listDiv.innerHTML += '<div class="xp-item '+item.type+'">\
-							<div class="xp-image"><img src="./img/expIcons/'+item.svgImage+'"></div>\
+							<div class="xp-image"><img src="./public/img/expIcons/'+item.svgImage+'"></div>\
 							<div class="xp-title">'+item.title+'</div>\
 							<div class="xp-desc">'+item.desc+'</div>\
 						</div>' ;
@@ -154,7 +154,7 @@ webList.forEach( (item) => {
 
 toolList.forEach( (item) => {
 	listDiv.innerHTML += '<div class="xp-item '+item.type+'">\
-							<div class="xp-image"><img src="./img/expIcons/'+item.svgImage+'"></div>\
+							<div class="xp-image"><img src="./public/img/expIcons/'+item.svgImage+'"></div>\
 							<div class="xp-title">'+item.title+'</div>\
 							<div class="xp-desc">'+item.desc+'</div>\
 						</div>' ;
@@ -163,7 +163,7 @@ toolList.forEach( (item) => {
 
 backendList.forEach( (item) => {
 	listDiv.innerHTML += '<div class="xp-item '+item.type+'">\
-							<div class="xp-image"><img src="./img/expIcons/'+item.svgImage+'"></div>\
+							<div class="xp-image"><img src="./public/img/expIcons/'+item.svgImage+'"></div>\
 							<div class="xp-title">'+item.title+'</div>\
 							<div class="xp-desc">'+item.desc+'</div>\
 						</div>' ;
