@@ -6,7 +6,7 @@
 	
 :root{
 	--font : 0.35em;
-	--left-l-font: 0.43em;
+	--left-l-font: 0.45em;
 	--gradient : linear-gradient(45deg,#9bc8b1 10%,#f59d8c 35%,#96bbdf);
 }
 
@@ -23,7 +23,7 @@
 }
 
 #logo{
-	width: 70%;
+	width: 7	0%;
 	background-image: var(--gradient);
 	background-size: 300% 300%;
 	-webkit-background-clip: text;
