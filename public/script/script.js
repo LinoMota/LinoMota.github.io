@@ -25,13 +25,21 @@ let tabs = document.querySelectorAll('.tabs a')
 let itemClass = ['backend','web','tool']
 
 tabs.forEach( (tab,i) => {
-	tab.onclick = () => {
-		
+
+	let f = () => {
+
 		let xpItems = document.querySelectorAll('.xp-item')
 
-		xpItems.forEach( (item) => {
-			setVisibleClass(item,itemClass[i]) 
+		xpItems.forEach((item) => {
+			setVisibleClass(item, itemClass[i])
 		})
+
+	}
+
+	tab.onclick = f
+	tab.onkeydown = (e) =>{
+		if(e.keyCode == 13)
+			tab.click()
 	}
 })
 

@@ -2,6 +2,7 @@
 @font-face {
 	font-family: funnyDuck;
 	src: url(./../font/FunnyDuck-mv12.ttf);
+	font-display: block;
 }
 	
 :root{

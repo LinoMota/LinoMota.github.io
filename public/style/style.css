@@ -15,6 +15,7 @@
 @font-face {
     font-family: Shanti;
     src: url(../font/Shanti-Regular.ttf);
+    font-display: fallback;
 }
 
 body{
