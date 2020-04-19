@@ -43,6 +43,7 @@ div.xp-item{
 }
 
 .xp-item{
+	
 	display: grid;
 	
 	justify-self: center;
@@ -51,7 +52,7 @@ div.xp-item{
 	width: var(--xp-card-size-w);
 
 	transition: border-radius background-color display opacity;
-	transition-duration: 200ms;
+	transition-duration: 150ms;
 
 	background-color: #151515;
 	border-radius: 20px;
@@ -66,7 +67,7 @@ div.xp-item{
 
 .xp-item:hover{
 	background-color: #1f1f1f;
-	transform: scale(1.02);
+	transform: scale(1.005);
 	box-shadow: rgba(255, 255,255,0.2) 2px 2px;
 }
 

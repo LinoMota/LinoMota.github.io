@@ -89,7 +89,7 @@ div.socialmedia{
     background-size: 100% 100%;
 }
 .socialmedia div:hover {
-    transform: scale(1.5) translate(0,-10px);
+    transform: scale(1.25) translate(0,-15px);
 }
 
 .socialmedia div.instagram{
