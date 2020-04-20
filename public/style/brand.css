@@ -6,9 +6,9 @@
 }
 	
 :root{
-	--font : 0.35em;
-	--left-l-font: 0.45em;
-	--gradient : linear-gradient(45deg,#9bc8b1 10%,#f59d8c 35%,#96bbdf);
+	--font : 0.25em;
+	--left-l-font: 0.35em;
+	--gradient : linear-gradient(45deg,white , white);
 }
 
 .brand{
@@ -19,12 +19,11 @@
 	justify-content: center;
 	font-family: funnyDuck, Arial, Helvetica, sans-serif;
 	font-size: var(--font);
-	height: 100%;
-	background-color: black;
+	height: 100;
 }
 
 #logo{
-	width: 7	0%;
+	width: 50%;
 	background-image: var(--gradient);
 	background-size: 300% 300%;
 	-webkit-background-clip: text;
@@ -52,7 +51,7 @@
 
 #logo:hover::after{
 	background-position: bottom;
-	font-size: calc(var(--font)*2.5);
+	font-size: calc(var(--left-l-font)*2);
 	transform: translate(0,0) rotate(0)  ; 
 }
 
@@ -82,7 +81,7 @@
 }
 
 #logo:hover span::after{
-	font-size: calc(var(--font)*2.5);
+	font-size: calc(var(--left-l-font)*2);
 }
 
 @keyframes gradient {
