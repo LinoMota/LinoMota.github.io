@@ -1,0 +1,19 @@
+[{
+        "svgImage": "figma.svg",
+        "type": "tool",
+        "title": "Figma",
+        "desc": "Minha ferramenta para prototipagem favorita, ótima quando se trata de organização e simulação das telas criadas, desde que conheci Figma sempre busco criar a ideia dentro da ferramenta antes de começar na  programar de fato."
+    },
+    {
+        "svgImage": "slack.svg",
+        "type": "tool",
+        "title": "Slack",
+        "desc": "Uma das melhores e mais ultilizadas ferramentas para comunicação para times de desenvolvimento, sempre ultilizo a mesma quando organizam algum projeto."
+    },
+    {
+        "svgImage": "discord.svg",
+        "type": "tool",
+        "title": "Discord",
+        "desc": "Discord é a minha plataforma favorita de comunicação ótimo site para conversar com os amigos via chat e voz, realizar livestream em servidores privados e publicos."
+    }
+]

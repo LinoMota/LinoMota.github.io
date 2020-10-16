@@ -1,0 +1,43 @@
+[{
+        "svgImage": "java.svg",
+        "type": "backend",
+        "title": "Java",
+        "desc": "Uma das minhas primeiras linguagens de programação, hoje Java está meio ofuscado no mercado por outras mais populares, porém em termo de aplicações industriais ainda está firme e forte."
+    },
+    {
+        "svgImage": "python.svg",
+        "type": "backend",
+        "title": "Python 3/2",
+        "desc": "Python a intuitiva linguaguem que me proporcionou dias de diversão, automatizando tarefas, simplificando processos e encurtando códigos, sua natureza dinâmica e facilidade de escrita torna fácil realizar seja a tarefa que for em seu ambiente. "
+    },
+    {
+        "svgImage": "lua.svg",
+        "type": "backend",
+        "title": "Lua",
+        "desc": "Aprendi Lua durante um curso que fiz, poderosa e portavel linguagem brasileira sua simplicidade me lembra muito python, porém tem coisas que Lua se mostra mais leve. Possui muitos fãs ao redor do mundo que criam desde simples módulos até engine para jogos. É programador brasileiro e não conhece Lua? Poser! :)"
+    },
+    {
+        "svgImage": "c++.svg",
+        "type": "backend",
+        "title": "C & C++",
+        "desc": "De longe minhas duas linguagens favoritas, desde que tive o primeiro contato na universidade essas duas verdadeiras armas de guerra se juntaram ao meu arsenal, foi por elas que me interessei em baixo nível a ponto de trabalhar com algumas dezenas de megas e implementar algoritmos em placas de prototipagem com Arduino."
+    },
+    {
+        "svgImage": "bash.svg",
+        "type": "backend",
+        "title": "Bash Programming",
+        "desc": "Comecei a aprender quando senti a necessidade de acelerar a configuração do meu ambiente, coisas como executar uma série específicas de passos e a possibilidade de executar comandos do unix nesse passos me deu poder para fazer simples interfaces que preparavam a aplicação para outros computadores."
+    },
+    {
+        "svgImage": "sql.svg",
+        "type": "backend",
+        "title": "SQL",
+        "desc": "Quando iniciei desenvolvimento web foi uma das necessidades, tive experiência com Oracle, Sqlite e MySql. A quantidade de dados que tive que trabalhar foi alguns milhares e não foi muito divertido no começo, porém agora já estou mais adaptado com esse tipo de situação."
+    },
+    {
+        "svgImage": "assembly.svg",
+        "type": "backend",
+        "title": "Assembly Language MIPS",
+        "desc": "Assembly foi uma descoberta na universidade que me despertou interesse para portar alguns algoritmos conhecidos para a mesma, inicialmente foi desafiante ter que usar recursos limitados, mas depois se percebe que não é algo tão difícil quanto parece."
+    }
+]
