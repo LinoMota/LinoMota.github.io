@@ -36,11 +36,11 @@ document.querySelectorAll('.tabs a').forEach((tab, i) => {
 	}
 })
 
-function loadJsonFile(filePath, callback) {
+function loadJsonFile(filePath) {
 
-	fetch(filePath).then(res => {
-		res.json().then(data => {
-			callback(data)
+	return new Promise((resolve, reject) => {
+		fetch(filePath).then(res => {
+			resolve(res.json())
 		})
 	})
 
@@ -63,8 +63,14 @@ function insertItems(jsonArray) {
 	})
 }
 
-loadJsonFile('../public/data/toolList.json', insertItems)
-loadJsonFile('../public/data/webExp.json', insertItems)
-loadJsonFile('./public/data/backendExp.json', insertItems)
-
-document.querySelectorAll('.tabs a')[0].click()
+Promise.all([
+	loadJsonFile('../public/data/toolList.json'),
+	loadJsonFile('../public/data/webExp.json'),
+	loadJsonFile('./public/data/backendExp.json')
+]).then(responses => {
+	console.log(responses)
+	responses.forEach(data => {
+		insertItems(data)
+	})
+	document.querySelectorAll('.tabs a')[0].click()
+})

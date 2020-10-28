@@ -1,36 +1,43 @@
 [{
-    "svgImage" : "js.svg",
-    "type" : "web",
-    "title" : "JavaScript ECMAScript 6",
-    "desc" : "Sólido conhecimento JavaScript pois desde que iniciou desenvolvimento web era sua principal ferramenta para validações de formulários, geração de gráficos via canvas e controle de gatilhos de eventos para animações."
-},
-{
-    "svgImage" : "css.svg",
-    "type" : "web",
-    "title" : "Css3 Cascading Style Sheets",
-    "desc" : "Css foi uma das descobertas mais divertidas, sempre buscou conhecer mais de seu comportamento e hoje Css está mais poderosa do que nunca. Com certeza uma das melhores partes de um projeto é a sua cara, logo Css é a ferramenta certa para o serviço. Esse site por exemplo :D css puro ! "
-},
-{
-    "svgImage" : "html.svg",
-    "type" : "web",
-    "title" : "HTML Hypertext Markup Language",
-    "desc" : "Essêncialmente esqueleto de qualquer site, grande possibilidades de manipulação e atualmente recebeu ótimas tags que junto ao JavaScript se mostram interessantes de serem ultilizadas."
-},
-{
-    "svgImage" : "php.svg",
-    "type" : "web",
-    "title" : "PHP Personal Home Page",
-    "desc" : "Minha primeira linguagem server side de fato, consegui fazer muita coisa em bastante pouco tempo com PHP, de fato uma poderosa e simples linguagem que ainda hoje possui muito á mostrar sobre outras presente no mercado."
-},
-{
-    "svgImage" : "node.svg",
-    "type" : "web",
-    "title" : "Node.js The Server Side JavaScript",
-    "desc" : "Experiência com projetos mais pessoais com Node.js, ótima adaptação do JavaScript para server side, bastante pessoas na comunidade, muitos pacotes para ultilizar via npm além de uma grande portabilidade."
-},
-{
-    "svgImage" : "react.svg",
-    "type" : "web",
-    "title" : "React",
-    "desc" : "Uma das melhores tecnologias que já ultilizei para fazer frontent, sua componentização transforma tudo em algo mais modular, sempre bem estruturado e possiblitando uma melhor leitura de código, devido a quantidade de arquivos e composição de interface."
-}]
+        "svgImage": "js.svg",
+        "type": "web",
+        "title": "JavaScript ECMAScript 6",
+        "desc": "Sólido conhecimento JavaScript pois desde que iniciou desenvolvimento web era sua principal ferramenta para validações de formulários, geração de gráficos via canvas e controle de gatilhos de eventos para animações."
+    },
+    {
+        "svgImage": "css.svg",
+        "type": "web",
+        "title": "Css3 Cascading Style Sheets",
+        "desc": "Css foi uma das descobertas mais divertidas, sempre buscou conhecer mais de seu comportamento e hoje Css está mais poderosa do que nunca. Com certeza uma das melhores partes de um projeto é a sua cara, logo Css é a ferramenta certa para o serviço. Esse site por exemplo :D css puro ! "
+    },
+    {
+        "svgImage": "html.svg",
+        "type": "web",
+        "title": "HTML Hypertext Markup Language",
+        "desc": "Essêncialmente esqueleto de qualquer site, grande possibilidades de manipulação e atualmente recebeu ótimas tags que junto ao JavaScript se mostram interessantes de serem ultilizadas."
+    },
+    {
+        "svgImage": "php.svg",
+        "type": "web",
+        "title": "PHP Personal Home Page",
+        "desc": "Minha primeira linguagem server side de fato, consegui fazer muita coisa em bastante pouco tempo com PHP, de fato uma poderosa e simples linguagem que ainda hoje possui muito á mostrar sobre outras presente no mercado."
+    },
+    {
+        "svgImage": "node.svg",
+        "type": "web",
+        "title": "Node.js",
+        "desc": "Experiência com projetos mais pessoais com Node.js, ótima adaptação do JavaScript para server side, bastante pessoas na comunidade, quase infinitos pacotes para ultilizar via npm e yarn além de uma grande portabilidade."
+    },
+    {
+        "svgImage": "react.svg",
+        "type": "web",
+        "title": "React",
+        "desc": "Uma das melhores tecnologias que já ultilizei para fazer frontent, sua componentização transforma tudo em algo mais modular, sempre bem estruturado e possiblitando uma melhor leitura de código, devido a quantidade de arquivos e composição de interface."
+    },
+    {
+        "svgImage": "typescript.svg",
+        "type": "web",
+        "title": "TypeScript",
+        "desc": "Me senti programando em C++ de satisfatório, consegui saber sobre meus objetos sem ter que re-ler código e ainda por cima poder de fato implementar padrões de projeto de uma forma elegante. TS foi tão bom para mim que me fez refatorar meu projeto JS (pronto para produção) em uma noite, fazendo com que eu achasse muitos erros durante o processo."
+    }
+]

@@ -15,5 +15,11 @@
         "type": "tool",
         "title": "Discord",
         "desc": "Discord é a minha plataforma favorita de comunicação ótimo site para conversar com os amigos via chat e voz, realizar livestream em servidores privados e publicos."
+    },
+    {
+        "svgImage": "docker.svg",
+        "type": "tool",
+        "title": "Docker",
+        "desc": "Funciona na minha máquina, mas não em homologação? Tudo isso se resolveu com essa ferramenta genial que me ajudou em muitas situações e me poupou bastante burocracia no deploy em servidores privados, busco sempre aprender ainda mais sobre."
     }
 ]

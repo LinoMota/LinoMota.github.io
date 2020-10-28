@@ -8,7 +8,7 @@
 :root{
 	--font : 0.25em;
 	--left-l-font: 0.35em;
-	--gradient : linear-gradient(45deg,white , white);
+	--gradient : linear-gradient(45deg,white , salmon);
 }
 
 .brand{
@@ -19,7 +19,7 @@
 	justify-content: center;
 	font-family: funnyDuck, Arial, Helvetica, sans-serif;
 	font-size: var(--font);
-	height: 100;
+	height: 100px;
 }
 
 #logo{

@@ -3,7 +3,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 50px;
+	height: 60px;
 	background-color: #1f1f1f;
 	margin: 5px 0;
 }
@@ -15,7 +15,7 @@
 .tabs a{
 	color: white;
 	margin: 5px 0;
-	font-size: 1.02em;
+	font-size: 1.1em;
 	transition: transform;
 	transition-duration: 200ms;
 	flex :1;
@@ -67,7 +67,7 @@ div.xp-item{
 
 .xp-item:hover{
 	background-color: #1f1f1f;
-	box-shadow: rgba(255, 255,255,0.2) 2px 2px;
+	box-shadow: #ffffff2f 4px 4px 5px;
 }
 
 .xp-image{

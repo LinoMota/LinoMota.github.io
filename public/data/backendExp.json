@@ -7,14 +7,14 @@
     {
         "svgImage": "python.svg",
         "type": "backend",
-        "title": "Python 3/2",
+        "title": "Python",
         "desc": "Python a intuitiva linguaguem que me proporcionou dias de diversão, automatizando tarefas, simplificando processos e encurtando códigos, sua natureza dinâmica e facilidade de escrita torna fácil realizar seja a tarefa que for em seu ambiente. "
     },
     {
         "svgImage": "lua.svg",
         "type": "backend",
         "title": "Lua",
-        "desc": "Aprendi Lua durante um curso que fiz, poderosa e portavel linguagem brasileira sua simplicidade me lembra muito python, porém tem coisas que Lua se mostra mais leve. Possui muitos fãs ao redor do mundo que criam desde simples módulos até engine para jogos. É programador brasileiro e não conhece Lua? Poser! :)"
+        "desc": "Aprendi Lua durante um curso que fiz, poderosa e portavel linguagem brasileira sua simplicidade me lembra muito python, porém tem coisas que Lua se mostra mais leve. Possui muitos fãs ao redor do mundo que criam desde simples módulos até engine para jogos."
     },
     {
         "svgImage": "c++.svg",
@@ -39,5 +39,11 @@
         "type": "backend",
         "title": "Assembly Language MIPS",
         "desc": "Assembly foi uma descoberta na universidade que me despertou interesse para portar alguns algoritmos conhecidos para a mesma, inicialmente foi desafiante ter que usar recursos limitados, mas depois se percebe que não é algo tão difícil quanto parece."
+    },
+    {
+        "svgImage": "rabbitmq.svg",
+        "type": "backend",
+        "title": "RabbitMQ",
+        "desc": "Tive experiência com esse microserviço em alguns projetos, exelente para desenhar soluções de forma mais simples, pois diminui gambiarras quando se trata de bastante processamento, as vezes a gente só precisa de algumas filas."
     }
 ]
