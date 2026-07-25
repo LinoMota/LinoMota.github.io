@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import { companyLogos } from '../data/logos'
+import { clouds, companyClouds } from '../data/clouds'
 import SectionHeading from './SectionHeading'
 import ExperienceLogo from './ExperienceLogo'
+import CloudShape from './CloudShape'
 
 export default function Experience() {
   const { t } = useLanguage()
@@ -71,6 +73,14 @@ export default function Experience() {
                 )
               })}
             </ul>
+
+            {companyClouds[job.company] && (
+              <div className="mt-5 flex flex-wrap items-center gap-5">
+                {companyClouds[job.company].map((key, ci) => (
+                  <CloudShape key={key} cloud={clouds[key]} delay={ci * 0.4} />
+                ))}
+              </div>
+            )}
 
             <div className="mt-4 flex flex-wrap gap-2">
               {job.tech.map((tech) => (
