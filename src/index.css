@@ -1,0 +1,209 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-pixel: 'Press Start 2P', var(--font-mono);
+
+  --color-bg: #05060a;
+  --color-bg-soft: #0b0d16;
+  --color-surface: #10131f;
+  --color-border: #1f2436;
+  --color-accent: #7cf7d0;
+  --color-accent-dim: #4fd8b0;
+  --color-violet: #a78bfa;
+  --color-text: #e9ecf5;
+  --color-text-dim: #9aa1b9;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+canvas {
+  border: none;
+  outline: none;
+  display: block;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #05060a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dim);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.02em;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.logo-cube-socket {
+  padding: 10px;
+  margin: 2px;
+  background: rgba(124, 247, 208, 0.04);
+  border: 1px solid var(--color-border);
+}
+
+.logo-cube-scene {
+  perspective: 340px;
+}
+
+.logo-cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: cube-spin 9s linear infinite;
+}
+
+.logo-cube-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef0f7;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes cube-spin {
+  from {
+    transform: rotateX(-14deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-14deg) rotateY(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-cube {
+    animation: none;
+    transform: rotateX(-14deg) rotateY(28deg);
+  }
+}
+
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.crt-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.pixel-corners {
+  border-radius: 0;
+  clip-path: polygon(
+    0 4px,
+    4px 4px,
+    4px 0,
+    calc(100% - 4px) 0,
+    calc(100% - 4px) 4px,
+    100% 4px,
+    100% calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) 100%,
+    4px 100%,
+    4px calc(100% - 4px),
+    0 calc(100% - 4px)
+  );
+}
+
+.pixel-btn {
+  border-radius: 0;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 4px 4px 0 0 var(--pixel-shadow, rgba(124, 247, 208, 0.5));
+  transition:
+    transform 0.12s steps(2),
+    box-shadow 0.12s steps(2);
+}
+
+.pixel-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--pixel-shadow, rgba(124, 247, 208, 0.5));
+}
+
+.pixel-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 var(--pixel-shadow, rgba(124, 247, 208, 0.5));
+}
+
+.pixel-tag {
+  border-radius: 0;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.noise-fade::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, transparent 0%, var(--color-bg) 85%);
+}
