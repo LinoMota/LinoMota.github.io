@@ -11,7 +11,7 @@ interface DockNavProps {
 }
 
 export default function DockNav({ view, onNavigate, onOpenAbout }: DockNavProps) {
-  const { t, locale, toggleLocale } = useLanguage()
+  const { t } = useLanguage()
 
   const items: DockItemData[] = [
     {
@@ -47,13 +47,6 @@ export default function DockNav({ view, onNavigate, onOpenAbout }: DockNavProps)
 
   return (
     <>
-      <button
-        onClick={toggleLocale}
-        className="pixel-tag fixed right-4 top-4 z-40 border border-border bg-bg-soft/80 px-3 py-1 font-mono text-xs text-text-dim backdrop-blur-md transition-colors hover:border-accent hover:text-accent"
-      >
-        {locale === 'pt' ? 'PT' : 'EN'}
-      </button>
-
       <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center pb-2">
         <Dock items={items} />
       </div>
