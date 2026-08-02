@@ -4,10 +4,11 @@ const pt: Content = {
   meta: {
     title: 'Lino Mota | Engenheiro de Software',
     description:
-      'Lino Mota, Engenheiro de Software especializado em backend, sistemas distribuídos e cloud. Quase 8 anos de experiência em Java, Node.js e arquiteturas de microsserviços.',
+      'Lino Mota, Engenheiro de Software especializado em backend, sistemas distribuídos e cloud. 8 anos de experiência profissional em Java, Node.js e arquiteturas de microsserviços.',
   },
   nav: {
-    about: 'Sobre',
+    home: 'Início',
+    about: 'História',
     experience: 'Experiência',
     skills: 'Skills',
     education: 'Formação',
@@ -15,11 +16,13 @@ const pt: Content = {
   },
   hero: {
     kicker: 'Engenheiro de Software',
+    welcome: ['Bem-vindo!', 'Esse é o meu site portfólio, espero que goste :D'],
     name: 'Lino Mota',
     role: 'Senior Back-End Developer',
     tagline:
-      'Construo sistemas distribuídos de alta escala: microsserviços resilientes, mensageria assíncrona e arquiteturas cloud-native que aguentam tráfego real. Veterano de 4 Black Fridays em produção.',
+      '8 anos de experiência profissional construindo sistemas distribuídos de alta escala: microsserviços resilientes, mensageria assíncrona e arquiteturas cloud-native que aguentam tráfego real. Veterano de 4 Black Fridays em produção.',
     location: 'Manaus, Amazonas, Brasil',
+    speaks: 'Eu falo',
     cta1: 'Ver experiência',
     cta2: 'Falar comigo',
     resume: 'Baixar currículo (PDF)',
@@ -28,12 +31,12 @@ const pt: Content = {
   about: {
     heading: 'Sobre mim',
     paragraphs: [
-      'Engenheiro de Software com quase 8 anos de experiência, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços.',
+      'Comecei no desenvolvimento de software em 2016 e hoje sou Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços.',
       'Ampla experiência em sistemas distribuídos de alta escala, varejo digital e computação em nuvem, com foco em entregar soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio. Veterano de 4 Black Fridays em produção, sustentando sistemas críticos de e-commerce sob pico de tráfego.',
       'Uso IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para aumentar produtividade, qualidade de código e velocidade de entrega.',
     ],
     stats: [
-      { value: '8+', label: 'anos de experiência' },
+      { value: '8+', label: 'anos de experiência profissional' },
       { value: '7', label: 'empresas' },
       { value: '20+', label: 'tecnologias no dia a dia' },
     ],
@@ -183,7 +186,7 @@ const pt: Content = {
   },
   contact: {
     heading: 'Vamos conversar',
-    sub: 'Aberto a novas oportunidades e projetos interessantes envolvendo sistemas distribuídos, backend e cloud.',
+    sub: 'Aberto a novas oportunidades e projetos interessantes envolvendo sistemas distribuídos, backend, fullstack e cloud.',
     cta: 'Enviar e-mail',
     email: 'devlinomota@gmail.com',
     linkedin: 'linkedin.com/in/lino-mota',
@@ -200,10 +203,11 @@ const en: Content = {
   meta: {
     title: 'Lino Mota | Software Engineer',
     description:
-      'Lino Mota, Software Engineer specializing in backend, distributed systems and cloud. Nearly 8 years of experience with Java, Node.js and microservices architectures.',
+      'Lino Mota, Software Engineer specializing in backend, distributed systems and cloud. 8 years of professional experience with Java, Node.js and microservices architectures.',
   },
   nav: {
-    about: 'About',
+    home: 'Home',
+    about: 'Story',
     experience: 'Experience',
     skills: 'Skills',
     education: 'Education',
@@ -211,11 +215,13 @@ const en: Content = {
   },
   hero: {
     kicker: 'Software Engineer',
+    welcome: ['Welcome!', "This is my portfolio site, hope you like it :D"],
     name: 'Lino Mota',
     role: 'Senior Back-End Developer',
     tagline:
-      'I build high-scale distributed systems: resilient microservices, asynchronous messaging and cloud-native architectures that hold up under real traffic. Veteran of 4 Black Fridays in production.',
+      '8 years of professional experience building high-scale distributed systems: resilient microservices, asynchronous messaging and cloud-native architectures that hold up under real traffic. Veteran of 4 Black Fridays in production.',
     location: 'Manaus, Amazonas, Brazil',
+    speaks: 'I speak',
     cta1: 'View experience',
     cta2: 'Get in touch',
     resume: 'Download résumé (PDF)',
@@ -224,12 +230,12 @@ const en: Content = {
   about: {
     heading: 'About me',
     paragraphs: [
-      'Software Engineer with nearly 8 years of experience specializing in backend development. Graduate in Software Engineering from the Federal University of Amazonas, with a professional trajectory ranging from maintaining legacy monolithic systems to building robust microservices-based architectures.',
+      'I started in software development in 2016 and today I am a Software Engineer with 8 years of professional experience specializing in backend development. Graduate in Software Engineering from the Federal University of Amazonas, with a professional trajectory ranging from maintaining legacy monolithic systems to building robust microservices-based architectures.',
       'Extensive experience in high-scale distributed systems, digital retail, and cloud computing, focused on delivering scalable, efficient, and resilient solutions aligned with business needs. Veteran of 4 Black Fridays in production, keeping critical e-commerce systems up under peak traffic.',
       'I leverage generative AI (GPT, Claude, Gemini, GitHub Copilot) within the development workflow to improve productivity, code quality, and delivery speed.',
     ],
     stats: [
-      { value: '8+', label: 'years of experience' },
+      { value: '8+', label: 'years of professional experience' },
       { value: '7', label: 'companies' },
       { value: '20+', label: 'technologies day-to-day' },
     ],
@@ -379,7 +385,7 @@ const en: Content = {
   },
   contact: {
     heading: "Let's talk",
-    sub: 'Open to new opportunities and interesting projects involving distributed systems, backend and cloud.',
+    sub: 'Open to new opportunities and interesting projects involving distributed systems, backend, fullstack and cloud.',
     cta: 'Send an email',
     email: 'devlinomota@gmail.com',
     linkedin: 'linkedin.com/in/lino-mota',

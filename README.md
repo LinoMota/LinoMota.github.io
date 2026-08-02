@@ -1,13 +1,15 @@
 # Lino Mota | Portfolio
 
-Portfólio pessoal estático, bilíngue (PT/EN), com hero 3D construído em React Three Fiber representando uma rede de sistemas distribuídos.
+Portfólio pessoal estático, bilíngue (PT/EN).
 
 ## Stack
 
 - [Vite](https://vitejs.dev/) + React + TypeScript
 - [Tailwind CSS v4](https://tailwindcss.com/)
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Three.js](https://threejs.org/)
+- [Three.js](https://threejs.org/) (ASCII text effect) + [ogl](https://github.com/oframe/ogl) (terminal background shader)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Lenis](https://lenis.darkroom.engineering/) (smooth scroll for the experience stack)
+- Componentes de UI adaptados do [React Bits](https://reactbits.dev/)
 
 ## Desenvolvimento
 

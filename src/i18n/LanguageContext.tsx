@@ -6,6 +6,7 @@ interface LanguageContextValue {
   locale: Locale
   setLocale: (locale: Locale) => void
   toggleLocale: () => void
+  hasStoredChoice: boolean
   t: (typeof content)['pt']
 }
 
@@ -14,11 +15,15 @@ const LanguageContext = createContext<LanguageContextValue | null>(null)
 function detectInitialLocale(): Locale {
   const stored = window.localStorage.getItem('locale')
   if (stored === 'pt' || stored === 'en') return stored
-  return navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en'
+  return 'en'
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(detectInitialLocale)
+  const [hasStoredChoice] = useState<boolean>(() => {
+    const stored = window.localStorage.getItem('locale')
+    return stored === 'pt' || stored === 'en'
+  })
 
   useEffect(() => {
     window.localStorage.setItem('locale', locale)
@@ -31,9 +36,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       locale,
       setLocale,
       toggleLocale: () => setLocale((prev) => (prev === 'pt' ? 'en' : 'pt')),
+      hasStoredChoice,
       t: content[locale],
     }),
-    [locale],
+    [locale, hasStoredChoice],
   )
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>

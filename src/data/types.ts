@@ -30,6 +30,7 @@ export interface Content {
     description: string
   }
   nav: {
+    home: string
     about: string
     experience: string
     skills: string
@@ -38,10 +39,12 @@ export interface Content {
   }
   hero: {
     kicker: string
+    welcome: string[]
     name: string
     role: string
     tagline: string
     location: string
+    speaks: string
     cta1: string
     cta2: string
     resume: string
