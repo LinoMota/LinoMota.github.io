@@ -1,0 +1,90 @@
+LINO MOTA
+                                             Manaus, Amazonas, Brasil
+                                   +55 92 98822-1173⋄ devlinomota@gmail.com
+                                           linkedin.com/in/lino-mota
+
+RESUMO PROFISSIONAL
+  Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Grad-
+  uado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória profissional que
+  vai desde a manutenção de sistemas monolı́ticos legados até a construção de arquiteturas robustas baseadas em
+  microsserviços. Possui ampla experiência em sistemas distribuı́dos de alta escala, varejo digital e computação em
+  nuvem, com foco na entrega de soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio.
+  Experiência com uso de IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para
+  aumento de produtividade, qualidade de código e velocidade de entrega.
+
+COMPETÊNCIAS TÉCNICAS
+
+  Linguagens                  Java, TypeScript, JavaScript, Python, SQL
+  Frameworks                  Spring Boot, Node.js, Nest.js, React, Next.js, Angular, ExtJs
+  Bancos de Dados             MySQL, MongoDB, Oracle, Redis, DynamoDB
+  Cloud & DevOps              AWS, GCP, Kubernetes, Docker, ArgoCD
+  Mensageria                  Apache Kafka, RabbitMQ, AWS Kinesis, GCP PubSub, Apache Storm
+  Busca & Analytics           Elasticsearch, Apache Solr
+  Autenticação              Keycloak, OAuth2, JWT, Spring Security
+  Testes                      JUnit, Mockito, Jest
+  IA                          GPT, Claude, Gemini, GitHub Copilot, Whisper
+  Ferramentas                 GitHub Actions, GitLab CI/CD, Grafana, Tesseract OCR
+
+EXPERIÊNCIA PROFISSIONAL
+  TQI                                                                                             Out 2025 - Presente
+  Senior Back-End Developer                                                                                   Remoto
+ · Consultoria alocada no PagBank (fintech), atuando no time de recarga de celular e serviços (gift cards), com
+   integração a diversos parceiros e serviços transacionais de alto volume
+ · Microsserviços em Java e Node.js com foco em escalabilidade e baixa latência
+ · Comunicação assı́ncrona orientada a eventos com Apache Kafka e cache com Redis
+ · Decisões arquiteturais para alta disponibilidade, resiliência e tolerância a falhas
+
+  Foursales                                                                                      Mai 2025 - Out 2025
+  Senior Back-End Developer                                                                                  Remoto
+ · APIs REST de alta performance em Java 17 com Spring Boot
+ · Eventos assı́ncronos via Kafka e busca otimizada com Elasticsearch
+ · Autenticação com Keycloak (OAuth2/JWT) e Spring Security
+ · Features de IA com Whisper (transcrição) integrado ao GPT para dados em tempo real
+
+  Instituto Amazon Innovare                                                                    Jan 2025 - Jun 2025
+  Backend Developer PL                                                                    Manaus, Amazonas, Brasil
+ · Sistema de gerenciamento de arquivos em larga escala com busca inteligente (OCR + Elasticsearch)
+ · APIs em Node.js/TypeScript/Nest.js para grandes volumes de documentos
+ · Pipeline de CI/CD completo com GitHub Actions, ArgoCD e Kubernetes na AWS (EKS/EC2)
+ · Treinamentos internos sobre ferramentas DevOps e uso de Claude Code no fluxo de trabalho
+
+  Americanas s.a.                                                                                Out 2022 - Dez 2024
+  Backend Developer PL – 3 Black Fridays                                                                     Remoto
+ · Arquitetura de busca e autocomplete em larga escala
+ · Microsserviços Java com Spring e mensageria via GCP Pub/Sub, AWS Kinesis e Apache Storm
+ · Migração de Apache Solr para Elasticsearch e gestão de MongoDB distribuı́do
+ · Deploy via GitLab CI/CD em Kubernetes na AWS e GCP
+ · Sustentação da busca sob pico de tráfego em 3 Black Fridays consecutivas, sem indisponibilidade
+
+  Linx                                                                                     Jan 2021 - Out 2022
+  FullStack Developer – 1 Black Friday                                                Manaus, Amazonas, Brasil
+ · SaaS B2B para gestão de vitrines de e-commerce
+ · Microsserviços Node.js/TypeScript e mensageria assı́ncrona com Kafka
+ · MongoDB, DynamoDB e cache com Redis
+ · Frontend em Angular 2 e deploy com AWS ECR/ECS
+ · Reforço na plataforma de vitrines dos clientes durante a Black Friday
+
+  iTRIAD Research and Development                                                          Nov 2019 - Jan 2021
+  Junior FullStack Developer                                                          Manaus, Amazonas, Brasil
+ · Sistemas financeiros e de gestão para a Yamaha
+ · Backend em Java 8 e Spring Boot, frontend em ExtJs
+ · Banco de dados Oracle
+ · Automações e web scraping com Node.js e RabbitMQ
+
+  FUCAPI                                                                                  Fev 2016 - Fev 2017
+  Fullstack Developer                                                            Manacapuru, Amazonas, Brasil
+ · Iniciativa SOFT-AM: projetos web e mobile voltados à educação
+ · Participação do planejamento à entrega final
+ · Boas práticas para código eficiente e de fácil manutenção
+
+FORMAÇÃO ACADÊMICA
+
+  Universidade Federal do Amazonas                                                          Jan 2018 - Dez 2023
+  Bacharelado em Engenharia de Software
+  Formação completa com foco em desenvolvimento de sistemas, arquitetura de software, metodologias ágeis e boas
+  práticas de engenharia de software.
+
+IDIOMAS
+
+  Português        Nativo
+  Inglês           Profissional Completo

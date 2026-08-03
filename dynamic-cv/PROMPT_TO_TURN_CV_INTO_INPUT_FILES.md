@@ -29,12 +29,16 @@ instead you paste this prompt plus your résumé text into **any** LLM chat
    - `stacks` → `input/stacks.json`
    - `education` → `input/education.json`
    - `languages` → `input/languages.json`
+   - `homepage` → `input/homepage.json`
+   - `websiteonly` → `input/websiteonly.json`
 7. Run `npm run build-cv` (or `npm start` and answer "yes" to the build
    question) to compile the PDFs and generate the site content.
 
 Skim the output before saving it - LLMs occasionally invent a detail or miss
 a nuance, so double-check dates, numbers, and anything sensitive (email,
-phone, links).
+phone, links). `homepage`/`websiteonly` are website-only (they don't affect
+the PDF) - expect to touch these up a bit, especially `websiteonly`'s asset
+paths (see the rules below).
 
 ---
 
@@ -46,9 +50,9 @@ You turn a résumé/CV into structured multilingual JSON.
 Target languages: pt, en
 (Every field marked "per language" below must have exactly one key per target language, e.g. {"pt": "...", "en": "..."}. If the résumé is only written in one language, translate it naturally into the others - don't leave them blank or copy the same text untranslated.)
 
-If you are able to run code and produce a downloadable file (e.g. a code interpreter or file-creation tool), create a zip archive named "dynamic-cv-input.zip" containing exactly five files - contact.json, experiences.json, stacks.json, education.json, languages.json - each containing the pretty-printed JSON value for that key from the shape below, and offer it for download. Don't reply with anything else in that case.
+If you are able to run code and produce a downloadable file (e.g. a code interpreter or file-creation tool), create a zip archive named "dynamic-cv-input.zip" containing exactly seven files - contact.json, experiences.json, stacks.json, education.json, languages.json, homepage.json, websiteonly.json - each containing the pretty-printed JSON value for that key from the shape below, and offer it for download. Don't reply with anything else in that case.
 
-If you do NOT have that ability, reply with ONLY a single JSON object (no prose, no markdown code fences, no explanation) with exactly these five top-level keys: "contact", "experiences", "stacks", "education", "languages". Match the shape below exactly - same field names, same nesting.
+If you do NOT have that ability, reply with ONLY a single JSON object (no prose, no markdown code fences, no explanation) with exactly these seven top-level keys: "contact", "experiences", "stacks", "education", "languages", "homepage", "websiteonly". Match the shape below exactly - same field names, same nesting.
 
 {
   "contact": {
@@ -97,7 +101,52 @@ If you do NOT have that ability, reply with ONLY a single JSON object (no prose,
       "label": "per language - the language's name, e.g. {\"pt\": \"Português\", \"en\": \"Portuguese\"}",
       "level": "per language - proficiency, e.g. {\"pt\": \"Nativo\", \"en\": \"Native\"}"
     }
-  ]
+  ],
+  "homepage": {
+    "meta": {
+      "title": "per language - browser tab title, e.g. \"<Name> | Software Engineer\"",
+      "description": "per language - one sentence, for search engines/link previews, summarizing who this is and what they do"
+    },
+    "nav": {
+      "home": "per language - nav label, e.g. Home/Início",
+      "about": "per language - e.g. Story/História",
+      "experience": "per language - e.g. Experience/Experiência",
+      "skills": "per language - e.g. Skills",
+      "education": "per language - e.g. Education/Formação",
+      "contact": "per language - e.g. Contact/Contato"
+    },
+    "kicker": "per language - short line above the hero heading, usually the job title again",
+    "welcome": "per language - each an ARRAY of 1-2 short strings, typed out on the homepage, e.g. [\"Welcome!\", \"This is my portfolio site.\"]",
+    "tagline": "per language - 1-2 sentence hero pitch (can reuse/shorten contact.summary)",
+    "speaks": "per language - short label before the spoken-languages list, e.g. \"I speak\"/\"Eu falo\"",
+    "cta1": "per language - primary button label, e.g. \"View experience\"",
+    "cta2": "per language - secondary button label, e.g. \"Get in touch\"",
+    "resumeLabel": "per language - label for the résumé download button, e.g. \"Download résumé (PDF)\"",
+    "aboutHeading": "per language - e.g. \"About me\"/\"Sobre mim\"",
+    "aboutParagraphs": "per language - each an ARRAY of 2-3 first-person narrative paragraphs about the candidate's background (expand on contact.summary, don't just repeat it verbatim)",
+    "aboutStats": [
+      { "value": "string, NOT per language, e.g. \"8+\", \"7\", \"20+\"", "label": "per language - what the number counts, e.g. \"years of experience\", \"companies\", \"technologies\"" }
+    ],
+    "experienceHeading": "per language - e.g. \"Experience\"",
+    "experienceSub": "per language - one sentence under the experience heading",
+    "skillsHeading": "per language - e.g. \"Technical skills\"",
+    "skillsSub": "per language - one sentence under the skills heading",
+    "languagesHeading": "per language - e.g. \"Languages\"",
+    "contactHeading": "per language - e.g. \"Let's talk\"",
+    "contactSub": "per language - one sentence inviting contact",
+    "contactCta": "per language - contact button label, e.g. \"Send an email\""
+  },
+  "websiteonly": {
+    "profileCard": {
+      "avatarUrl": "string, NOT per language - leave as \"/profile.png\" as a placeholder; the user will add their own photo at that path",
+      "handle": "string, NOT per language - a short handle, e.g. GitHub username",
+      "iconUrl": "string, NOT per language - leave as \"/assets/demo/iconpattern.png\" as a placeholder"
+    },
+    "resumeFiles": "per language - e.g. {\"pt\": \"./cv-pt.pdf\", \"en\": \"./cv-en.pdf\"} (match the target languages)",
+    "footer": "per language - short footer line, e.g. \"Built with React, Three.js and a lot of coffee.\"",
+    "companyLogos": "object, NOT per language - leave as {} (empty). It would map each \"experiences[].company\" value to a logo image path, but you don't have logo files to point to - the user fills this in by hand.",
+    "companyClouds": "object, NOT per language - leave as {} (empty) unless the résumé text explicitly names a cloud provider (aws/gcp/azure/kubernetes) for a given company, in which case map that \"experiences[].company\" value to an array of provider keys, e.g. {\"Acme Corp\": [\"aws\"]}"
+  }
 }
 
 Rules:
@@ -105,7 +154,9 @@ Rules:
 - Order "experiences" and "education" from most recent to oldest, matching the résumé.
 - "tag" and "highlight" are optional per experience - only fill them in when the résumé clearly calls out a standout, quantifiable achievement (a big campaign, an award, a notable metric). Otherwise both are null.
 - "languages" reflects every language the candidate speaks per the résumé, independent from the "Target languages" list above.
-- Every array must stay an array even with a single item (e.g. "education" and "stacks" are arrays of objects, "bullets.<lang>" is an array of strings).
+- "homepage" and "websiteonly" are website-only content - they are never used to generate the PDF, only the site. Keep them consistent with "contact"/"experiences" (same name, same companies) but feel free to write "aboutParagraphs" and "tagline" with more personality than the formal résumé summary.
+- "websiteonly.companyLogos" and "websiteonly.profileCard" reference image files that don't exist yet - use the placeholders described above rather than guessing a path, and leave a mental note that the user needs to add those asset files themselves.
+- Every array must stay an array even with a single item (e.g. "education" and "stacks" are arrays of objects, "bullets.<lang>" is an array of strings, "homepage.welcome"/"homepage.aboutParagraphs" are arrays of strings per language).
 - Output only the zip file OR only the JSON object as described above - nothing else before or after it.
 
 Here is the résumé:

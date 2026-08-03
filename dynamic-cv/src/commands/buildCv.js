@@ -15,6 +15,23 @@ function listTemplates() {
     .map((e) => e.name)
 }
 
+// The document/site languages to build are NOT the same thing as the
+// candidate's spoken languages in input/languages.json (someone can be a
+// native Portuguese speaker and still want a bilingual pt/en site+CV, and
+// vice-versa). Detect them from a bilingual field that's always present and
+// always translated into every target language - contact.jobTitle first,
+// falling back to summary/location, and only falling back to
+// languages.json's codes for legacy/malformed input.
+function detectTargetLanguages(input) {
+  for (const field of [input.contact?.jobTitle, input.contact?.summary, input.contact?.location]) {
+    if (field && typeof field === 'object' && !Array.isArray(field)) {
+      const codes = Object.keys(field)
+      if (codes.length > 0) return codes
+    }
+  }
+  return input.languages.map((l) => l.code)
+}
+
 async function pickTemplate() {
   const templates = listTemplates()
   if (templates.length === 0) {
@@ -55,9 +72,9 @@ export async function buildCv() {
   }
 
   const input = loadAllInput()
-  const langCodes = input.languages.map((l) => l.code)
+  const langCodes = detectTargetLanguages(input)
   if (langCodes.length === 0) {
-    throw new Error('input/languages.json has no entries - need at least one language code to build.')
+    throw new Error('Could not detect target languages from input/contact.json (jobTitle/summary/location) or input/languages.json.')
   }
 
   const templateName = await pickTemplate()

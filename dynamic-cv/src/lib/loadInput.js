@@ -30,6 +30,18 @@ export function checkInputStatus() {
   return { valid: missing.length === 0, missing, usingSample }
 }
 
+export function cleanRealInputFiles() {
+  const removed = []
+  for (const name of [...REQUIRED_FILES, ...OPTIONAL_FILES]) {
+    const real = path.join(INPUT_DIR, `${name}.json`)
+    if (fs.existsSync(real)) {
+      fs.rmSync(real)
+      removed.push(`${name}.json`)
+    }
+  }
+  return removed
+}
+
 export function loadAllInput() {
   const data = {}
 

@@ -3,23 +3,35 @@ import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 import Anthropic from '@anthropic-ai/sdk'
 import { INPUT_DIR } from '../lib/paths.js'
-import { buildResumeSchema } from '../lib/resumeSchema.js'
+import { buildResumeSchema, buildSiteExtrasSchema } from '../lib/resumeSchema.js'
 
 const DEFAULT_LANGUAGES = ['pt', 'en']
 
-function buildSystemPrompt(languageCodes) {
+function buildResumeSystemPrompt(languageCodes) {
   const languageList = languageCodes.join(', ')
   return `You turn raw resume/CV text (extracted from a PDF, so layout may be imperfect) into structured multilingual JSON.
 
 The target document languages for this run are: ${languageList}. Every "bilingual" field in the schema is actually an object with exactly one key per target language (${languageList}).
 
 Rules:
-- Every such field must be provided in ALL of these languages: ${languageList}. If the source resume is only in one language, translate it naturally into the others rather than leaving them blank or copying the same text untranslated.
+- Every "bilingual" field must be provided in ALL of these languages: ${languageList}. If the source resume is only in one language, translate it naturally into the others rather than leaving them blank or copying the same text untranslated.
 - Do not invent facts that aren't in the resume. If a field genuinely has no value (e.g. no GitHub profile mentioned), use an empty string "" for required string fields.
 - "tag" and "highlight" on an experience are optional extras: only fill them in when the resume text clearly calls out a standout achievement (e.g. a big campaign, an award, a notable metric). Otherwise leave them null.
 - Order experiences and education from most recent to oldest, matching the resume.
 - "languages" (the candidate's spoken languages with proficiency) should reflect every language the candidate actually speaks per the resume - this can include languages beyond ${languageList} (e.g. Spanish, French), and is independent from the ${languageList} document-translation requirement above.
 - Keep bullets concise, one accomplishment per bullet, rewritten for clarity rather than copied verbatim with PDF line-break artifacts.
+- Respond with JSON only, matching the provided schema exactly.`
+}
+
+function buildSiteExtrasSystemPrompt(languageCodes) {
+  const languageList = languageCodes.join(', ')
+  return `You write bonus website-only content (never used in the PDF, only the site) to go alongside an already-generated résumé JSON. Every "bilingual" field in the schema is an object with exactly one key per target language (${languageList}).
+
+Rules:
+- You'll be given the already-inferred résumé JSON (contact, experiences, stacks, education, languages) as context. Keep "homepage" and "websiteonly" consistent with it (same name, same companies), but "aboutParagraphs" and "tagline" can have more personality than the formal résumé summary - a first-person narrative, not a repeat of "contact.summary".
+- "websiteonly.profileCard.avatarUrl" and "iconUrl" are always the placeholders described in the schema - there are no real image files to point to yet.
+- "websiteonly.companyLogos" and "companyClouds" are always {} - there are no logo assets to reference; the user fills these in by hand later.
+- "websiteonly.resumeFiles" gives one relative PDF path per target language, following the pattern "./cv-<lang>.pdf".
 - Respond with JSON only, matching the provided schema exactly.`
 }
 
@@ -37,13 +49,22 @@ function extractPdfText(pdfPath) {
   return result.stdout.trim()
 }
 
-async function inferResumeData(resumeText, languageCodes) {
-  const client = new Anthropic()
+function extractJson(response) {
+  if (response.stop_reason === 'refusal') {
+    throw new Error('Claude declined to process this document.')
+  }
+  const textBlock = response.content.find((block) => block.type === 'text')
+  if (!textBlock) {
+    throw new Error('Claude returned no text content.')
+  }
+  return JSON.parse(textBlock.text)
+}
 
+async function inferResumeData(client, resumeText, languageCodes) {
   const response = await client.messages.create({
     model: 'claude-opus-5',
     max_tokens: 8192,
-    system: buildSystemPrompt(languageCodes),
+    system: buildResumeSystemPrompt(languageCodes),
     messages: [
       {
         role: 'user',
@@ -55,16 +76,26 @@ async function inferResumeData(resumeText, languageCodes) {
     },
   })
 
-  if (response.stop_reason === 'refusal') {
-    throw new Error('Claude declined to process this document.')
-  }
+  return extractJson(response)
+}
 
-  const textBlock = response.content.find((block) => block.type === 'text')
-  if (!textBlock) {
-    throw new Error('Claude returned no text content.')
-  }
+async function inferSiteExtras(client, resumeData, languageCodes) {
+  const response = await client.messages.create({
+    model: 'claude-opus-5',
+    max_tokens: 8192,
+    system: buildSiteExtrasSystemPrompt(languageCodes),
+    messages: [
+      {
+        role: 'user',
+        content: `Here is the already-inferred résumé JSON:\n\n${JSON.stringify(resumeData, null, 2)}`,
+      },
+    ],
+    output_config: {
+      format: { type: 'json_schema', schema: buildSiteExtrasSchema(languageCodes) },
+    },
+  })
 
-  return JSON.parse(textBlock.text)
+  return extractJson(response)
 }
 
 function writeJson(name, data) {
@@ -104,14 +135,22 @@ export async function generateInputForCv(pdfPath, languages) {
     return
   }
 
-  console.log(`Asking Claude to infer structured resume data in [${languageCodes.join(', ')}] (this can take a bit)...`)
-  const data = await inferResumeData(resumeText, languageCodes)
+  const client = new Anthropic()
 
-  writeJson('contact.json', data.contact)
-  writeJson('experiences.json', data.experiences)
-  writeJson('stacks.json', data.stacks)
-  writeJson('education.json', data.education)
-  writeJson('languages.json', data.languages)
+  console.log(`Asking Claude to infer structured resume data in [${languageCodes.join(', ')}] (this can take a bit)...`)
+  const resumeData = await inferResumeData(client, resumeText, languageCodes)
+
+  writeJson('contact.json', resumeData.contact)
+  writeJson('experiences.json', resumeData.experiences)
+  writeJson('stacks.json', resumeData.stacks)
+  writeJson('education.json', resumeData.education)
+  writeJson('languages.json', resumeData.languages)
+
+  console.log('Asking Claude to infer bonus website-only content (homepage, websiteonly)...')
+  const siteExtras = await inferSiteExtras(client, resumeData, languageCodes)
+
+  writeJson('homepage.json', siteExtras.homepage)
+  writeJson('websiteonly.json', siteExtras.websiteonly)
 
   console.log('\nWrote:')
   console.log('  input/contact.json')
@@ -119,5 +158,9 @@ export async function generateInputForCv(pdfPath, languages) {
   console.log('  input/stacks.json')
   console.log('  input/education.json')
   console.log('  input/languages.json')
-  console.log('\nReview and edit these files (they were inferred automatically and may need fixes), then run "npm run build-cv".')
+  console.log('  input/homepage.json (bonus: website-only copy)')
+  console.log('  input/websiteonly.json (bonus: profile card, footer, company logos/clouds)')
+  console.log(
+    '\nReview and edit these files (they were inferred automatically and may need fixes - websiteonly.json especially needs real asset paths), then run "npm run build-cv".',
+  )
 }

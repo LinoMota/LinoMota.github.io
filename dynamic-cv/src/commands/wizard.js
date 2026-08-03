@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import prompts from 'prompts'
 import { INPUT_DIR } from '../lib/paths.js'
-import { checkInputStatus } from '../lib/loadInput.js'
+import { checkInputStatus, cleanRealInputFiles } from '../lib/loadInput.js'
 import { exportToSite } from '../lib/exportToSite.js'
 import { generateInputForCv } from './generateInputForCv.js'
 import { buildCv } from './buildCv.js'
@@ -104,7 +104,15 @@ export async function runWizard() {
       : 'Rodar build-cv agora (compilar PDFs e gerar o conteúdo do site)?',
     initial: true,
   })
-  if (!shouldBuild) return
+  if (!shouldBuild) {
+    if (hasRealInput) {
+      const removed = cleanRealInputFiles()
+      if (removed.length > 0) {
+        console.log(`\nLimpando input/ (mantendo só os *.sample.json): removido ${removed.join(', ')}.`)
+      }
+    }
+    return
+  }
 
   await buildCv()
 
