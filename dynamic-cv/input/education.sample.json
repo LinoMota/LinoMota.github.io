@@ -1,0 +1,18 @@
+[
+  {
+    "institution": {
+      "pt": "Universidade Federal do Amazonas",
+      "en": "Federal University of Amazonas"
+    },
+    "start": { "pt": "Jan 2018", "en": "Jan 2018" },
+    "end": { "pt": "Dez 2023", "en": "Dec 2023" },
+    "degree": {
+      "pt": "Bacharelado em Engenharia de Software",
+      "en": "Bachelor's Degree in Software Engineering"
+    },
+    "description": {
+      "pt": "Formação completa com foco em desenvolvimento de sistemas, arquitetura de software, metodologias ágeis e boas práticas de engenharia de software.",
+      "en": "Complete education focused on systems development, software architecture, agile methodologies, and software engineering best practices."
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  { "label": { "pt": "Linguagens", "en": "Languages" }, "items": ["Java", "TypeScript", "JavaScript", "Python", "SQL"] },
+  {
+    "label": { "pt": "Frameworks", "en": "Frameworks" },
+    "items": ["Spring Boot", "Node.js", "Nest.js", "React", "Next.js", "Angular", "ExtJs"]
+  },
+  {
+    "label": { "pt": "Bancos de Dados", "en": "Databases" },
+    "items": ["MySQL", "MongoDB", "Oracle", "Redis", "DynamoDB"]
+  },
+  {
+    "label": { "pt": "Cloud & DevOps", "en": "Cloud & DevOps" },
+    "items": ["AWS", "GCP", "Kubernetes", "Docker", "ArgoCD"]
+  },
+  {
+    "label": { "pt": "Mensageria", "en": "Messaging" },
+    "items": ["Apache Kafka", "RabbitMQ", "AWS Kinesis", "GCP PubSub", "Apache Storm"]
+  },
+  {
+    "label": { "pt": "Busca & Analytics", "en": "Search & Analytics" },
+    "items": ["Elasticsearch", "Apache Solr"]
+  },
+  {
+    "label": { "pt": "Autenticação", "en": "Authentication" },
+    "items": ["Keycloak", "OAuth2", "JWT", "Spring Security"]
+  },
+  { "label": { "pt": "Testes", "en": "Testing" }, "items": ["JUnit", "Mockito", "Jest"] },
+  { "label": { "pt": "IA", "en": "AI" }, "items": ["GPT", "Claude", "Gemini", "GitHub Copilot", "Whisper"] },
+  {
+    "label": { "pt": "Ferramentas", "en": "Tools" },
+    "items": ["GitHub Actions", "GitLab CI/CD", "Grafana", "Tesseract OCR"]
+  }
+]

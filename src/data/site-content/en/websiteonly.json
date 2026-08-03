@@ -1,0 +1,38 @@
+{
+  "profileCard": {
+    "avatarUrl": "/profile.png",
+    "handle": "LinoMota",
+    "iconUrl": "/assets/demo/iconpattern.png"
+  },
+  "resumeFiles": "./cv-en.pdf",
+  "footer": "Built with React, Three.js and Amazonian coffee.",
+  "companyLogos": {
+    "TQI": "./logo/tqi.png",
+    "Foursales": "./logo/foursales.png",
+    "Instituto Amazon Innovare": "./logo/amazon-innovare.jpeg",
+    "Americanas s.a.": "./logo/americanas.webp",
+    "Linx": "./logo/linx.png",
+    "iTRIAD Research and Development": "./logo/itriad.jpeg",
+    "FUCAPI": "./logo/fucapi.png"
+  },
+  "companyClouds": {
+    "TQI": [
+      "aws"
+    ],
+    "Foursales": [
+      "aws"
+    ],
+    "Instituto Amazon Innovare": [
+      "aws",
+      "kubernetes"
+    ],
+    "Americanas s.a.": [
+      "aws",
+      "gcp",
+      "kubernetes"
+    ],
+    "Linx": [
+      "aws"
+    ]
+  }
+}

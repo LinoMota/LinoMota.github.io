@@ -1,0 +1,151 @@
+[
+  {
+    "company": "TQI",
+    "start": "Oct 2025",
+    "end": "Present",
+    "role": "Senior Back-End Developer",
+    "location": "Remote",
+    "bullets": [
+      "Consulting engagement at PagBank (fintech), working on the mobile recharge and services team (gift cards), integrating with multiple partners and high-throughput transactional services",
+      "Microservices in Java and Node.js focused on scalability and low latency",
+      "Asynchronous event-driven communication with Apache Kafka and caching with Redis",
+      "Architectural decisions for high availability, resilience and fault tolerance"
+    ],
+    "tech": [
+      "Java",
+      "Node.js",
+      "Kafka",
+      "Redis"
+    ],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Foursales",
+    "start": "May 2025",
+    "end": "Oct 2025",
+    "role": "Senior Back-End Developer",
+    "location": "Remote",
+    "bullets": [
+      "High-performance RESTful APIs in Java 17 with Spring Boot",
+      "Asynchronous events via Kafka and optimized search with Elasticsearch",
+      "Authentication with Keycloak (OAuth2/JWT) and Spring Security",
+      "AI-powered features with Whisper (speech-to-text) integrated with GPT for real-time data"
+    ],
+    "tech": [
+      "Java 17",
+      "Spring Boot",
+      "Kafka",
+      "Elasticsearch",
+      "Keycloak"
+    ],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Instituto Amazon Innovare",
+    "start": "Jan 2025",
+    "end": "Jun 2025",
+    "role": "Backend Developer PL",
+    "location": "Manaus, Amazonas, Brazil",
+    "bullets": [
+      "Large-scale file management system with intelligent search (OCR + Elasticsearch)",
+      "APIs in Node.js/TypeScript/Nest.js for high-volume document processing",
+      "Full CI/CD pipeline with GitHub Actions, ArgoCD and Kubernetes on AWS (EKS/EC2)",
+      "Internal training on DevOps tooling and Claude Code in the development workflow"
+    ],
+    "tech": [
+      "Node.js",
+      "Nest.js",
+      "Kubernetes",
+      "ArgoCD",
+      "AWS"
+    ],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Americanas s.a.",
+    "start": "Oct 2022",
+    "end": "Dec 2024",
+    "role": "Backend Developer PL",
+    "location": "Remote",
+    "bullets": [
+      "Search and autocomplete architecture at scale",
+      "Java microservices with Spring and messaging via GCP Pub/Sub, AWS Kinesis and Apache Storm",
+      "Migration from Apache Solr to Elasticsearch and distributed MongoDB management",
+      "Deployment via GitLab CI/CD to Kubernetes on AWS and GCP"
+    ],
+    "tech": [
+      "Java",
+      "Spring",
+      "Elasticsearch",
+      "MongoDB",
+      "Kubernetes"
+    ],
+    "tag": "🔥 3 Black Fridays",
+    "highlight": "Kept search up under peak load through 3 consecutive Black Fridays, with zero downtime"
+  },
+  {
+    "company": "Linx",
+    "start": "Jan 2021",
+    "end": "Oct 2022",
+    "role": "FullStack Developer",
+    "location": "Manaus, Amazonas, Brazil",
+    "bullets": [
+      "B2B SaaS for e-commerce storefront management",
+      "Node.js/TypeScript microservices and asynchronous messaging with Kafka",
+      "MongoDB, DynamoDB and Redis caching",
+      "Angular 2 frontend and deployment with AWS ECR/ECS"
+    ],
+    "tech": [
+      "Node.js",
+      "TypeScript",
+      "Kafka",
+      "Angular",
+      "AWS"
+    ],
+    "tag": "🔥 1 Black Friday",
+    "highlight": "Reinforced clients storefront platform during Black Friday"
+  },
+  {
+    "company": "iTRIAD Research and Development",
+    "start": "Nov 2019",
+    "end": "Jan 2021",
+    "role": "Junior FullStack Developer",
+    "location": "Manaus, Amazonas, Brazil",
+    "bullets": [
+      "Financial and management systems for Yamaha",
+      "Backend in Java 8 and Spring Boot, frontend in ExtJs",
+      "Oracle database",
+      "Automation and web scraping with Node.js and RabbitMQ"
+    ],
+    "tech": [
+      "Java 8",
+      "Spring Boot",
+      "ExtJs",
+      "Oracle",
+      "RabbitMQ"
+    ],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "FUCAPI",
+    "start": "Feb 2016",
+    "end": "Feb 2017",
+    "role": "Fullstack Developer",
+    "location": "Manacapuru, Amazonas, Brazil",
+    "bullets": [
+      "SOFT-AM initiative: web and mobile projects for education",
+      "Involved from planning through final delivery",
+      "Best practices for efficient, maintainable code"
+    ],
+    "tech": [
+      "Web",
+      "Mobile"
+    ],
+    "tag": null,
+    "highlight": null
+  }
+]

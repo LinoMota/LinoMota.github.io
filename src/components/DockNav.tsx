@@ -2,15 +2,14 @@ import { BookOpen, Brain, Briefcase, Home, Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import Dock, { type DockItemData } from '../reactbits/Dock'
 
-export type View = 'home' | 'experience' | 'skills' | 'contact'
+export type View = 'home' | 'about' | 'experience' | 'skills' | 'contact'
 
 interface DockNavProps {
   view: View
   onNavigate: (view: View) => void
-  onOpenAbout: () => void
 }
 
-export default function DockNav({ view, onNavigate, onOpenAbout }: DockNavProps) {
+export default function DockNav({ view, onNavigate }: DockNavProps) {
   const { t } = useLanguage()
 
   const items: DockItemData[] = [
@@ -21,9 +20,10 @@ export default function DockNav({ view, onNavigate, onOpenAbout }: DockNavProps)
       active: view === 'home',
     },
     {
-      icon: <BookOpen size={20} className="text-text" />,
+      icon: <BookOpen size={20} className={view === 'about' ? 'text-accent' : 'text-text'} />,
       label: t.nav.about,
-      onClick: onOpenAbout,
+      onClick: () => onNavigate('about'),
+      active: view === 'about',
     },
     {
       icon: <Briefcase size={20} className={view === 'experience' ? 'text-accent' : 'text-text'} />,
@@ -46,10 +46,8 @@ export default function DockNav({ view, onNavigate, onOpenAbout }: DockNavProps)
   ]
 
   return (
-    <>
-      <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center pb-2">
-        <Dock items={items} />
-      </div>
-    </>
+    <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center pb-2">
+      <Dock items={items} />
+    </div>
   )
 }

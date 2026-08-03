@@ -8,6 +8,9 @@ export interface ExperienceEntry {
   location: string
   bullets: string[]
   tech: string[]
+  /** Short badge, e.g. "🔥 3 Black Fridays". */
+  tag?: string
+  /** Standout achievement for this role, rendered as its own highlighted subsection. */
   highlight?: string
 }
 
@@ -22,6 +25,12 @@ export interface EducationEntry {
   start: string
   end: string
   description: string
+}
+
+export interface LanguageEntry {
+  code: string
+  name: string
+  level: string
 }
 
 export interface Content {
@@ -58,8 +67,6 @@ export interface Content {
   experience: {
     heading: string
     sub: string
-    present: string
-    remote: string
     items: ExperienceEntry[]
   }
   skills: {
@@ -71,7 +78,7 @@ export interface Content {
     heading: string
     items: EducationEntry[]
     languagesHeading: string
-    languages: { name: string; level: string }[]
+    languages: LanguageEntry[]
   }
   contact: {
     heading: string

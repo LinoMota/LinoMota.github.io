@@ -1,401 +1,216 @@
-import type { Content, Locale } from './types'
+import type { Content, EducationEntry, ExperienceEntry, LanguageEntry, Locale, SkillGroup } from './types'
 
-const pt: Content = {
-  meta: {
-    title: 'Lino Mota | Engenheiro de Software',
-    description:
-      'Lino Mota, Engenheiro de Software especializado em backend, sistemas distribuídos e cloud. 8 anos de experiência profissional em Java, Node.js e arquiteturas de microsserviços.',
-  },
-  nav: {
-    home: 'Início',
-    about: 'História',
-    experience: 'Experiência',
-    skills: 'Skills',
-    education: 'Formação',
-    contact: 'Contato',
-  },
-  hero: {
-    kicker: 'Engenheiro de Software',
-    welcome: ['Bem-vindo!', 'Esse é o meu site portfólio, espero que goste :D'],
-    name: 'Lino Mota',
-    role: 'Senior Back-End Developer',
-    tagline:
-      '8 anos de experiência profissional construindo sistemas distribuídos de alta escala: microsserviços resilientes, mensageria assíncrona e arquiteturas cloud-native que aguentam tráfego real. Veterano de 4 Black Fridays em produção.',
-    location: 'Manaus, Amazonas, Brasil',
-    speaks: 'Eu falo',
-    cta1: 'Ver experiência',
-    cta2: 'Falar comigo',
-    resume: 'Baixar currículo (PDF)',
-    resumeFile: './cv-pt.pdf',
-  },
-  about: {
-    heading: 'Sobre mim',
-    paragraphs: [
-      'Comecei no desenvolvimento de software em 2016 e hoje sou Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços.',
-      'Ampla experiência em sistemas distribuídos de alta escala, varejo digital e computação em nuvem, com foco em entregar soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio. Veterano de 4 Black Fridays em produção, sustentando sistemas críticos de e-commerce sob pico de tráfego.',
-      'Uso IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para aumentar produtividade, qualidade de código e velocidade de entrega.',
-    ],
-    stats: [
-      { value: '8+', label: 'anos de experiência profissional' },
-      { value: '7', label: 'empresas' },
-      { value: '20+', label: 'tecnologias no dia a dia' },
-    ],
-  },
-  experience: {
-    heading: 'Experiência',
-    sub: 'Da manutenção de monólitos legados até arquiteturas de microsserviços em escala.',
-    present: 'Atual',
-    remote: 'Remoto',
-    items: [
-      {
-        company: 'TQI',
-        role: 'Senior Back-End Developer',
-        start: 'Out 2025',
-        end: 'Presente',
-        location: 'Remoto',
-        bullets: [
-          'Consultoria alocada no PagBank (fintech), atuando no time de recarga de celular e serviços (gift cards), com integração a diversos parceiros e serviços transacionais de alto volume',
-          'Microsserviços em Java e Node.js com foco em escalabilidade e baixa latência',
-          'Comunicação assíncrona orientada a eventos com Apache Kafka e cache com Redis',
-          'Decisões arquiteturais para alta disponibilidade, resiliência e tolerância a falhas',
-        ],
-        tech: ['Java', 'Node.js', 'Kafka', 'Redis'],
-      },
-      {
-        company: 'Foursales',
-        role: 'Senior Back-End Developer',
-        start: 'Mai 2025',
-        end: 'Out 2025',
-        location: 'Remoto',
-        bullets: [
-          'APIs REST de alta performance em Java 17 com Spring Boot',
-          'Eventos assíncronos via Kafka e busca otimizada com Elasticsearch',
-          'Autenticação com Keycloak (OAuth2/JWT) e Spring Security',
-          'Features de IA com Whisper (transcrição) integrado ao GPT para dados em tempo real',
-        ],
-        tech: ['Java 17', 'Spring Boot', 'Kafka', 'Elasticsearch', 'Keycloak'],
-      },
-      {
-        company: 'Instituto Amazon Innovare',
-        role: 'Backend Developer PL',
-        start: 'Jan 2025',
-        end: 'Jun 2025',
-        location: 'Manaus, Amazonas, Brasil',
-        bullets: [
-          'Sistema de gerenciamento de arquivos em larga escala com busca inteligente (OCR + Elasticsearch)',
-          'APIs em Node.js/TypeScript/Nest.js para grandes volumes de documentos',
-          'Pipeline de CI/CD completo com GitHub Actions, ArgoCD e Kubernetes na AWS (EKS/EC2)',
-          'Treinamentos internos sobre ferramentas DevOps e uso de Claude Code no fluxo de trabalho',
-        ],
-        tech: ['Node.js', 'Nest.js', 'Kubernetes', 'ArgoCD', 'AWS'],
-      },
-      {
-        company: 'Americanas s.a.',
-        role: 'Backend Developer PL',
-        start: 'Out 2022',
-        end: 'Dez 2024',
-        location: 'Remoto',
-        bullets: [
-          'Arquitetura de busca e autocomplete em larga escala',
-          'Microsserviços Java com Spring e mensageria via GCP Pub/Sub, AWS Kinesis e Apache Storm',
-          'Migração de Apache Solr para Elasticsearch e gestão de MongoDB distribuído',
-          'Deploy via GitLab CI/CD em Kubernetes na AWS e GCP',
-          'Sustentação da busca sob pico de tráfego em 3 Black Fridays consecutivas, sem indisponibilidade',
-        ],
-        tech: ['Java', 'Spring', 'Elasticsearch', 'MongoDB', 'Kubernetes'],
-        highlight: '🔥 3 Black Fridays',
-      },
-      {
-        company: 'Linx',
-        role: 'FullStack Developer',
-        start: 'Jan 2021',
-        end: 'Out 2022',
-        location: 'Manaus, Amazonas, Brasil',
-        bullets: [
-          'SaaS B2B para gestão de vitrines de e-commerce',
-          'Microsserviços Node.js/TypeScript e mensageria assíncrona com Kafka',
-          'MongoDB, DynamoDB e cache com Redis',
-          'Frontend em Angular 2 e deploy com AWS ECR/ECS',
-          'Reforço na plataforma de vitrines dos clientes durante a Black Friday',
-        ],
-        tech: ['Node.js', 'TypeScript', 'Kafka', 'Angular', 'AWS'],
-        highlight: '🔥 1 Black Friday',
-      },
-      {
-        company: 'iTRIAD Research and Development',
-        role: 'Junior FullStack Developer',
-        start: 'Nov 2019',
-        end: 'Jan 2021',
-        location: 'Manaus, Amazonas, Brasil',
-        bullets: [
-          'Sistemas financeiros e de gestão para a Yamaha',
-          'Backend em Java 8 e Spring Boot, frontend em ExtJs',
-          'Banco de dados Oracle',
-          'Automações e web scraping com Node.js e RabbitMQ',
-        ],
-        tech: ['Java 8', 'Spring Boot', 'ExtJs', 'Oracle', 'RabbitMQ'],
-      },
-      {
-        company: 'FUCAPI',
-        role: 'Fullstack Developer',
-        start: 'Fev 2016',
-        end: 'Fev 2017',
-        location: 'Manacapuru, Amazonas, Brasil',
-        bullets: [
-          'Iniciativa SOFT-AM: projetos web e mobile voltados à educação',
-          'Participação do planejamento à entrega final',
-          'Boas práticas para código eficiente e de fácil manutenção',
-        ],
-        tech: ['Web', 'Mobile'],
-      },
-    ],
-  },
-  skills: {
-    heading: 'Skills técnicas',
-    sub: 'Stack usada no dia a dia para construir sistemas escaláveis e resilientes.',
-    groups: [
-      { label: 'Linguagens', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL'] },
-      { label: 'Frameworks', items: ['Spring Boot', 'Node.js', 'Nest.js', 'React', 'Next.js', 'Angular', 'ExtJs'] },
-      { label: 'Bancos de Dados', items: ['MySQL', 'MongoDB', 'Oracle', 'Redis', 'DynamoDB'] },
-      { label: 'Cloud & DevOps', items: ['AWS', 'GCP', 'Kubernetes', 'Docker', 'ArgoCD'] },
-      { label: 'Mensageria', items: ['Apache Kafka', 'RabbitMQ', 'AWS Kinesis', 'GCP PubSub', 'Apache Storm'] },
-      { label: 'Busca & Analytics', items: ['Elasticsearch', 'Apache Solr'] },
-      { label: 'Autenticação', items: ['Keycloak', 'OAuth2', 'JWT', 'Spring Security'] },
-      { label: 'Testes', items: ['JUnit', 'Mockito', 'Jest'] },
-      { label: 'IA', items: ['GPT', 'Claude', 'Gemini', 'GitHub Copilot', 'Whisper'] },
-      { label: 'Ferramentas', items: ['GitHub Actions', 'GitLab CI/CD', 'Grafana', 'Tesseract OCR'] },
-    ],
-  },
-  education: {
-    heading: 'Formação',
-    items: [
-      {
-        school: 'Universidade Federal do Amazonas',
-        degree: 'Bacharelado em Engenharia de Software',
-        start: 'Jan 2018',
-        end: 'Dez 2023',
-        description:
-          'Formação completa com foco em desenvolvimento de sistemas, arquitetura de software, metodologias ágeis e boas práticas de engenharia de software.',
-      },
-    ],
-    languagesHeading: 'Idiomas',
-    languages: [
-      { name: 'Português', level: 'Nativo' },
-      { name: 'Inglês', level: 'Profissional Completo' },
-    ],
-  },
-  contact: {
-    heading: 'Vamos conversar',
-    sub: 'Aberto a novas oportunidades e projetos interessantes envolvendo sistemas distribuídos, backend, fullstack e cloud.',
-    cta: 'Enviar e-mail',
-    email: 'devlinomota@gmail.com',
-    linkedin: 'linkedin.com/in/lino-mota',
-    linkedinUrl: 'https://www.linkedin.com/in/lino-mota/',
-    github: 'github.com/LinoMota',
-    githubUrl: 'https://github.com/LinoMota',
-  },
-  footer: {
-    text: 'Construído com React, Three.js e café amazonense.',
-  },
+// This module builds `Content` (the shape every view component consumes) from
+// the JSON generated by the dynamic-cv CLI. Regenerate with (from dynamic-cv/):
+//   npm start                       (guided wizard: scan a PDF or fill basics, build, export)
+// or run the steps individually:
+//   npm run build-cv && npm run export-to-site
+
+import ptContact from './site-content/pt/contact.json'
+import ptExperiences from './site-content/pt/experiences.json'
+import ptStacks from './site-content/pt/stacks.json'
+import ptEducation from './site-content/pt/education.json'
+import ptLanguages from './site-content/pt/languages.json'
+import ptHomepage from './site-content/pt/homepage.json'
+import ptWebsiteOnly from './site-content/pt/websiteonly.json'
+
+import enContact from './site-content/en/contact.json'
+import enExperiences from './site-content/en/experiences.json'
+import enStacks from './site-content/en/stacks.json'
+import enEducation from './site-content/en/education.json'
+import enLanguages from './site-content/en/languages.json'
+import enHomepage from './site-content/en/homepage.json'
+import enWebsiteOnly from './site-content/en/websiteonly.json'
+
+interface SiteContact {
+  name: string
+  jobTitle: string
+  location: string
+  email: string
+  linkedin: string
+  linkedinUrl: string
+  github: string
+  githubUrl: string
 }
 
-const en: Content = {
-  meta: {
-    title: 'Lino Mota | Software Engineer',
-    description:
-      'Lino Mota, Software Engineer specializing in backend, distributed systems and cloud. 8 years of professional experience with Java, Node.js and microservices architectures.',
-  },
-  nav: {
-    home: 'Home',
-    about: 'Story',
-    experience: 'Experience',
-    skills: 'Skills',
-    education: 'Education',
-    contact: 'Contact',
-  },
-  hero: {
-    kicker: 'Software Engineer',
-    welcome: ['Welcome!', "This is my portfolio site, hope you like it :D"],
-    name: 'Lino Mota',
-    role: 'Senior Back-End Developer',
-    tagline:
-      '8 years of professional experience building high-scale distributed systems: resilient microservices, asynchronous messaging and cloud-native architectures that hold up under real traffic. Veteran of 4 Black Fridays in production.',
-    location: 'Manaus, Amazonas, Brazil',
-    speaks: 'I speak',
-    cta1: 'View experience',
-    cta2: 'Get in touch',
-    resume: 'Download résumé (PDF)',
-    resumeFile: './cv-en.pdf',
-  },
-  about: {
-    heading: 'About me',
-    paragraphs: [
-      'I started in software development in 2016 and today I am a Software Engineer with 8 years of professional experience specializing in backend development. Graduate in Software Engineering from the Federal University of Amazonas, with a professional trajectory ranging from maintaining legacy monolithic systems to building robust microservices-based architectures.',
-      'Extensive experience in high-scale distributed systems, digital retail, and cloud computing, focused on delivering scalable, efficient, and resilient solutions aligned with business needs. Veteran of 4 Black Fridays in production, keeping critical e-commerce systems up under peak traffic.',
-      'I leverage generative AI (GPT, Claude, Gemini, GitHub Copilot) within the development workflow to improve productivity, code quality, and delivery speed.',
-    ],
-    stats: [
-      { value: '8+', label: 'years of professional experience' },
-      { value: '7', label: 'companies' },
-      { value: '20+', label: 'technologies day-to-day' },
-    ],
-  },
-  experience: {
-    heading: 'Experience',
-    sub: 'From maintaining legacy monoliths to microservices architectures at scale.',
-    present: 'Present',
-    remote: 'Remote',
-    items: [
-      {
-        company: 'TQI',
-        role: 'Senior Back-End Developer',
-        start: 'Oct 2025',
-        end: 'Present',
-        location: 'Remote',
-        bullets: [
-          'Consulting engagement at PagBank (fintech), working on the mobile recharge and services team (gift cards), integrating with multiple partners and high-throughput transactional services',
-          'Microservices in Java and Node.js focused on scalability and low latency',
-          'Asynchronous event-driven communication with Apache Kafka and caching with Redis',
-          'Architectural decisions for high availability, resilience and fault tolerance',
-        ],
-        tech: ['Java', 'Node.js', 'Kafka', 'Redis'],
-      },
-      {
-        company: 'Foursales',
-        role: 'Senior Back-End Developer',
-        start: 'May 2025',
-        end: 'Oct 2025',
-        location: 'Remote',
-        bullets: [
-          'High-performance RESTful APIs in Java 17 with Spring Boot',
-          'Asynchronous events via Kafka and optimized search with Elasticsearch',
-          'Authentication with Keycloak (OAuth2/JWT) and Spring Security',
-          'AI-powered features with Whisper (speech-to-text) integrated with GPT for real-time data',
-        ],
-        tech: ['Java 17', 'Spring Boot', 'Kafka', 'Elasticsearch', 'Keycloak'],
-      },
-      {
-        company: 'Instituto Amazon Innovare',
-        role: 'Backend Developer PL',
-        start: 'Jan 2025',
-        end: 'Jun 2025',
-        location: 'Manaus, Amazonas, Brazil',
-        bullets: [
-          'Large-scale file management system with intelligent search (OCR + Elasticsearch)',
-          'APIs in Node.js/TypeScript/Nest.js for high-volume document processing',
-          'Full CI/CD pipeline with GitHub Actions, ArgoCD and Kubernetes on AWS (EKS/EC2)',
-          'Internal training on DevOps tooling and Claude Code in the development workflow',
-        ],
-        tech: ['Node.js', 'Nest.js', 'Kubernetes', 'ArgoCD', 'AWS'],
-      },
-      {
-        company: 'Americanas s.a.',
-        role: 'Backend Developer PL',
-        start: 'Oct 2022',
-        end: 'Dec 2024',
-        location: 'Remote',
-        bullets: [
-          'Search and autocomplete architecture at scale',
-          'Java microservices with Spring and messaging via GCP Pub/Sub, AWS Kinesis and Apache Storm',
-          'Migration from Apache Solr to Elasticsearch and distributed MongoDB management',
-          'Deployment via GitLab CI/CD to Kubernetes on AWS and GCP',
-          'Kept search up under peak load through 3 consecutive Black Fridays, with zero downtime',
-        ],
-        tech: ['Java', 'Spring', 'Elasticsearch', 'MongoDB', 'Kubernetes'],
-        highlight: '🔥 3 Black Fridays',
-      },
-      {
-        company: 'Linx',
-        role: 'FullStack Developer',
-        start: 'Jan 2021',
-        end: 'Oct 2022',
-        location: 'Manaus, Amazonas, Brazil',
-        bullets: [
-          'B2B SaaS for e-commerce storefront management',
-          'Node.js/TypeScript microservices and asynchronous messaging with Kafka',
-          'MongoDB, DynamoDB and Redis caching',
-          'Angular 2 frontend and deployment with AWS ECR/ECS',
-          'Reinforced clients storefront platform during Black Friday',
-        ],
-        tech: ['Node.js', 'TypeScript', 'Kafka', 'Angular', 'AWS'],
-        highlight: '🔥 1 Black Friday',
-      },
-      {
-        company: 'iTRIAD Research and Development',
-        role: 'Junior FullStack Developer',
-        start: 'Nov 2019',
-        end: 'Jan 2021',
-        location: 'Manaus, Amazonas, Brazil',
-        bullets: [
-          'Financial and management systems for Yamaha',
-          'Backend in Java 8 and Spring Boot, frontend in ExtJs',
-          'Oracle database',
-          'Automation and web scraping with Node.js and RabbitMQ',
-        ],
-        tech: ['Java 8', 'Spring Boot', 'ExtJs', 'Oracle', 'RabbitMQ'],
-      },
-      {
-        company: 'FUCAPI',
-        role: 'Fullstack Developer',
-        start: 'Feb 2016',
-        end: 'Feb 2017',
-        location: 'Manacapuru, Amazonas, Brazil',
-        bullets: [
-          'SOFT-AM initiative: web and mobile projects for education',
-          'Involved from planning through final delivery',
-          'Best practices for efficient, maintainable code',
-        ],
-        tech: ['Web', 'Mobile'],
-      },
-    ],
-  },
-  skills: {
-    heading: 'Technical skills',
-    sub: 'The day-to-day stack for building scalable, resilient systems.',
-    groups: [
-      { label: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL'] },
-      { label: 'Frameworks', items: ['Spring Boot', 'Node.js', 'Nest.js', 'React', 'Next.js', 'Angular', 'ExtJs'] },
-      { label: 'Databases', items: ['MySQL', 'MongoDB', 'Oracle', 'Redis', 'DynamoDB'] },
-      { label: 'Cloud & DevOps', items: ['AWS', 'GCP', 'Kubernetes', 'Docker', 'ArgoCD'] },
-      { label: 'Messaging', items: ['Apache Kafka', 'RabbitMQ', 'AWS Kinesis', 'GCP PubSub', 'Apache Storm'] },
-      { label: 'Search & Analytics', items: ['Elasticsearch', 'Apache Solr'] },
-      { label: 'Authentication', items: ['Keycloak', 'OAuth2', 'JWT', 'Spring Security'] },
-      { label: 'Testing', items: ['JUnit', 'Mockito', 'Jest'] },
-      { label: 'AI', items: ['GPT', 'Claude', 'Gemini', 'GitHub Copilot', 'Whisper'] },
-      { label: 'Tools', items: ['GitHub Actions', 'GitLab CI/CD', 'Grafana', 'Tesseract OCR'] },
-    ],
-  },
-  education: {
-    heading: 'Education',
-    items: [
-      {
-        school: 'Federal University of Amazonas',
-        degree: "Bachelor's Degree in Software Engineering",
-        start: 'Jan 2018',
-        end: 'Dec 2023',
-        description:
-          'Complete education focused on systems development, software architecture, agile methodologies, and software engineering best practices.',
-      },
-    ],
-    languagesHeading: 'Languages',
-    languages: [
-      { name: 'Portuguese', level: 'Native' },
-      { name: 'English', level: 'Full Professional' },
-    ],
-  },
-  contact: {
-    heading: "Let's talk",
-    sub: 'Open to new opportunities and interesting projects involving distributed systems, backend, fullstack and cloud.',
-    cta: 'Send an email',
-    email: 'devlinomota@gmail.com',
-    linkedin: 'linkedin.com/in/lino-mota',
-    linkedinUrl: 'https://www.linkedin.com/in/lino-mota/',
-    github: 'github.com/LinoMota',
-    githubUrl: 'https://github.com/LinoMota',
-  },
-  footer: {
-    text: 'Built with React, Three.js and Amazonian coffee.',
-  },
+interface SiteExperience {
+  company: string
+  start: string
+  end: string
+  role: string
+  location: string
+  bullets: string[]
+  tech: string[]
+  tag: string | null
+  highlight: string | null
 }
+
+interface SiteEducation {
+  institution: string
+  start: string
+  end: string
+  degree: string
+  description: string
+}
+
+interface SiteLanguage {
+  code: string
+  label: string
+  level: string
+}
+
+interface SiteHomepage {
+  meta: { title: string; description: string }
+  nav: { home: string; about: string; experience: string; skills: string; education: string; contact: string }
+  kicker: string
+  welcome: string[]
+  tagline: string
+  speaks: string
+  cta1: string
+  cta2: string
+  resumeLabel: string
+  aboutHeading: string
+  aboutParagraphs: string[]
+  aboutStats: { value: string; label: string }[]
+  experienceHeading: string
+  experienceSub: string
+  skillsHeading: string
+  skillsSub: string
+  languagesHeading: string
+  contactHeading: string
+  contactSub: string
+  contactCta: string
+}
+
+export interface ProfileCardData {
+  avatarUrl: string
+  handle: string
+  iconUrl: string
+}
+
+interface SiteWebsiteOnly {
+  profileCard: ProfileCardData
+  resumeFiles: string
+  footer: string
+  companyLogos: Record<string, string>
+  companyClouds: Record<string, string[]>
+}
+
+interface SiteBundle {
+  contact: SiteContact
+  experiences: SiteExperience[]
+  stacks: SkillGroup[]
+  education: SiteEducation[]
+  languages: SiteLanguage[]
+  homepage: SiteHomepage
+  websiteonly: SiteWebsiteOnly
+}
+
+function buildContent(bundle: SiteBundle): Content {
+  const { contact, experiences, stacks, education, languages, homepage, websiteonly } = bundle
+
+  return {
+    meta: homepage.meta,
+    nav: homepage.nav,
+    hero: {
+      kicker: homepage.kicker,
+      welcome: homepage.welcome,
+      name: contact.name,
+      role: contact.jobTitle,
+      tagline: homepage.tagline,
+      location: contact.location,
+      speaks: homepage.speaks,
+      cta1: homepage.cta1,
+      cta2: homepage.cta2,
+      resume: homepage.resumeLabel,
+      resumeFile: websiteonly.resumeFiles,
+    },
+    about: {
+      heading: homepage.aboutHeading,
+      paragraphs: homepage.aboutParagraphs,
+      stats: homepage.aboutStats,
+    },
+    experience: {
+      heading: homepage.experienceHeading,
+      sub: homepage.experienceSub,
+      items: experiences.map(
+        (job): ExperienceEntry => ({
+          company: job.company,
+          role: job.role,
+          start: job.start,
+          end: job.end,
+          location: job.location,
+          bullets: job.bullets,
+          tech: job.tech,
+          tag: job.tag ?? undefined,
+          highlight: job.highlight ?? undefined,
+        }),
+      ),
+    },
+    skills: {
+      heading: homepage.skillsHeading,
+      sub: homepage.skillsSub,
+      groups: stacks,
+    },
+    education: {
+      heading: homepage.nav.education,
+      items: education.map(
+        (edu): EducationEntry => ({
+          school: edu.institution,
+          degree: edu.degree,
+          start: edu.start,
+          end: edu.end,
+          description: edu.description,
+        }),
+      ),
+      languagesHeading: homepage.languagesHeading,
+      languages: languages.map(
+        (lang): LanguageEntry => ({
+          code: lang.code,
+          name: lang.label,
+          level: lang.level,
+        }),
+      ),
+    },
+    contact: {
+      heading: homepage.contactHeading,
+      sub: homepage.contactSub,
+      cta: homepage.contactCta,
+      email: contact.email,
+      linkedin: contact.linkedin,
+      linkedinUrl: contact.linkedinUrl,
+      github: contact.github,
+      githubUrl: contact.githubUrl,
+    },
+    footer: {
+      text: websiteonly.footer,
+    },
+  }
+}
+
+const pt = buildContent({
+  contact: ptContact,
+  experiences: ptExperiences,
+  stacks: ptStacks,
+  education: ptEducation,
+  languages: ptLanguages,
+  homepage: ptHomepage as SiteHomepage,
+  websiteonly: ptWebsiteOnly,
+})
+
+const en = buildContent({
+  contact: enContact,
+  experiences: enExperiences,
+  stacks: enStacks,
+  education: enEducation,
+  languages: enLanguages,
+  homepage: enHomepage as SiteHomepage,
+  websiteonly: enWebsiteOnly,
+})
 
 export const content: Record<Locale, Content> = { pt, en }
+
+export const profileCard: Record<Locale, ProfileCardData> = {
+  pt: ptWebsiteOnly.profileCard,
+  en: enWebsiteOnly.profileCard,
+}

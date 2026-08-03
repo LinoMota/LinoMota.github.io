@@ -5,7 +5,7 @@ export default function SkillsView() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative mx-auto min-h-screen w-full max-w-5xl px-6 pb-40 pt-28">
+    <section className="relative mx-auto min-h-screen w-full max-w-5xl px-6 pb-40 pt-14 sm:pt-28">
       <div className="text-center">
         <span className="pixel-panel inline-flex items-center justify-center border-border bg-surface p-3 text-amber">
           <Brain size={28} />

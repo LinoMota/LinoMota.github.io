@@ -1,9 +1,4 @@
-export const companyLogos: Record<string, string> = {
-  TQI: './logo/tqi.png',
-  Foursales: './logo/foursales.png',
-  'Instituto Amazon Innovare': './logo/amazon-innovare.jpeg',
-  'Americanas s.a.': './logo/americanas.webp',
-  Linx: './logo/linx.png',
-  'iTRIAD Research and Development': './logo/itriad.jpeg',
-  FUCAPI: './logo/fucapi.png',
-}
+import websiteonly from './site-content/en/websiteonly.json'
+
+// companyLogos/companyClouds are not translated, so either locale's file works.
+export const companyLogos: Record<string, string> = websiteonly.companyLogos

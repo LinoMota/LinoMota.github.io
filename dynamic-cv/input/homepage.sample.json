@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": { "pt": "Lino Mota | Engenheiro de Software", "en": "Lino Mota | Software Engineer" },
+    "description": {
+      "pt": "Lino Mota, Engenheiro de Software especializado em backend, sistemas distribuídos e cloud. 8 anos de experiência profissional em Java, Node.js e arquiteturas de microsserviços.",
+      "en": "Lino Mota, Software Engineer specializing in backend, distributed systems and cloud. 8 years of professional experience with Java, Node.js and microservices architectures."
+    }
+  },
+  "nav": {
+    "home": { "pt": "Início", "en": "Home" },
+    "about": { "pt": "História", "en": "Story" },
+    "experience": { "pt": "Experiência", "en": "Experience" },
+    "skills": { "pt": "Skills", "en": "Skills" },
+    "education": { "pt": "Formação", "en": "Education" },
+    "contact": { "pt": "Contato", "en": "Contact" }
+  },
+  "kicker": { "pt": "Engenheiro de Software", "en": "Software Engineer" },
+  "welcome": {
+    "pt": ["Bem-vindo!", "Esse é o meu site portfólio, espero que goste :D"],
+    "en": ["Welcome!", "This is my portfolio site, hope you like it :D"]
+  },
+  "tagline": {
+    "pt": "8 anos de experiência profissional construindo sistemas distribuídos de alta escala: microsserviços resilientes, mensageria assíncrona e arquiteturas cloud-native que aguentam tráfego real. Veterano de 4 Black Fridays em produção.",
+    "en": "8 years of professional experience building high-scale distributed systems: resilient microservices, asynchronous messaging and cloud-native architectures that hold up under real traffic. Veteran of 4 Black Fridays in production."
+  },
+  "speaks": { "pt": "Eu falo", "en": "I speak" },
+  "cta1": { "pt": "Ver experiência", "en": "View experience" },
+  "cta2": { "pt": "Falar comigo", "en": "Get in touch" },
+  "resumeLabel": { "pt": "Baixar currículo (PDF)", "en": "Download résumé (PDF)" },
+  "aboutHeading": { "pt": "Sobre mim", "en": "About me" },
+  "aboutParagraphs": {
+    "pt": [
+      "Comecei no desenvolvimento de software em 2016 e hoje sou Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços.",
+      "Ampla experiência em sistemas distribuídos de alta escala, varejo digital e computação em nuvem, com foco em entregar soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio. Veterano de 4 Black Fridays em produção, sustentando sistemas críticos de e-commerce sob pico de tráfego.",
+      "Uso IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para aumentar produtividade, qualidade de código e velocidade de entrega."
+    ],
+    "en": [
+      "I started in software development in 2016 and today I am a Software Engineer with 8 years of professional experience specializing in backend development. Graduate in Software Engineering from the Federal University of Amazonas, with a professional trajectory ranging from maintaining legacy monolithic systems to building robust microservices-based architectures.",
+      "Extensive experience in high-scale distributed systems, digital retail, and cloud computing, focused on delivering scalable, efficient, and resilient solutions aligned with business needs. Veteran of 4 Black Fridays in production, keeping critical e-commerce systems up under peak traffic.",
+      "I leverage generative AI (GPT, Claude, Gemini, GitHub Copilot) within the development workflow to improve productivity, code quality, and delivery speed."
+    ]
+  },
+  "aboutStats": [
+    { "value": "8+", "label": { "pt": "anos de experiência profissional", "en": "years of professional experience" } },
+    { "value": "7", "label": { "pt": "empresas", "en": "companies" } },
+    { "value": "20+", "label": { "pt": "tecnologias no dia a dia", "en": "technologies day-to-day" } }
+  ],
+  "experienceHeading": { "pt": "Experiência", "en": "Experience" },
+  "experienceSub": {
+    "pt": "Da manutenção de monólitos legados até arquiteturas de microsserviços em escala.",
+    "en": "From maintaining legacy monoliths to microservices architectures at scale."
+  },
+  "skillsHeading": { "pt": "Skills técnicas", "en": "Technical skills" },
+  "skillsSub": {
+    "pt": "Stack usada no dia a dia para construir sistemas escaláveis e resilientes.",
+    "en": "The day-to-day stack for building scalable, resilient systems."
+  },
+  "languagesHeading": { "pt": "Idiomas", "en": "Languages" },
+  "contactHeading": { "pt": "Vamos conversar", "en": "Let's talk" },
+  "contactSub": {
+    "pt": "Aberto a novas oportunidades e projetos interessantes envolvendo sistemas distribuídos, backend, fullstack e cloud.",
+    "en": "Open to new opportunities and interesting projects involving distributed systems, backend, fullstack and cloud."
+  },
+  "contactCta": { "pt": "Enviar e-mail", "en": "Send an email" }
+}

@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+%
+% This is the shared document shell used for every language build.
+% It carries NO candidate data itself - the CLI generates a sibling
+% file named curriculo_<lang>.tex (e.g. curriculo_en.tex) that defines
+% every \newcommand referenced below (\cvname, \resumoprofissional,
+% \skillsRows, \experiencias, etc.), then compiles this file next to it.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+% resume.cls already loads and configures geometry (0.75in/0.6in margins) -
+% do not \usepackage{geometry} again here, it causes an "Option clash" error.
+\usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+\usepackage{xparse}
+
+%----------------------------------------------------------------------------------------
+% LANGUAGE DATA FILE
+% The CLI replaces the line below with e.g. \input{curriculo_en.tex}
+% for whichever language it is currently building.
+%----------------------------------------------------------------------------------------
+
+% {{INPUT_CURRICULO}}
+
+%----------------------------------------------------------------------------------------
+
+\name{\cvname}
+\address{\cvaddress}
+\address{\cvphone \\ \cvemail}
+\address{\cvlinkedin}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+% Sourced from: input/contact.json -> summary.<lang>
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\tituloResumo}
+\resumoprofissional
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+% Sourced from: input/stacks.json (one row per skill group)
+% \skillsRows is generated as a sequence of "\label & item, item, ... \\" lines,
+% one per entry in stacks.json, using each group's label.<lang> and items.
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\tituloCompetencias}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\skillsRows
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+% Sourced from: input/experiences.json
+% \experiencias is a csv list of {Company|Start - End|Role|Location|bullets}
+% groups, one per job, generated in the same order as the JSON array.
+% Each job's optional "tag" becomes a bolded suffix on the role line, and its
+% optional "highlight" becomes an extra emphasized bullet at the end.
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\tituloExperiencia}
+
+\NewDocumentCommand{\processExperience}{>{\SplitArgument{4}{|}}m}{%
+  \processExperienceAux#1%
+}
+
+\NewDocumentCommand{\processExperienceAux}{mmmmm}{%
+  \begin{rSubsection}{#1}{#2}{#3}{#4}
+  #5
+  \end{rSubsection}
+}
+
+\expandafter\forcsvlist\expandafter\processExperience\expandafter{\experiencias}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+% Sourced from: input/education.json (first entry; extend this section if you
+% need to render more than one degree)
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\tituloFormacao}
+
+{\bf \formacaoInstituicao} \hfill {\em \formacaoData} \\
+\formacaoCurso \\
+\formacaoDesc
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% LANGUAGES
+% Sourced from: input/languages.json (\idiomaRows is one "\label & level \\"
+% line per entry, in the same order as the JSON array)
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\tituloIdiomas}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\idiomaRows
+\end{tabular}
+
+\end{rSection}
+
+\end{document}

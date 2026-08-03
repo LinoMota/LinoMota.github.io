@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Lino Mota | Engenheiro de Software",
+    "description": "Lino Mota, Engenheiro de Software especializado em backend, sistemas distribuídos e cloud. 8 anos de experiência profissional em Java, Node.js e arquiteturas de microsserviços."
+  },
+  "nav": {
+    "home": "Início",
+    "about": "História",
+    "experience": "Experiência",
+    "skills": "Skills",
+    "education": "Formação",
+    "contact": "Contato"
+  },
+  "kicker": "Engenheiro de Software",
+  "welcome": [
+    "Bem-vindo!",
+    "Esse é o meu site portfólio, espero que goste :D"
+  ],
+  "tagline": "8 anos de experiência profissional construindo sistemas distribuídos de alta escala: microsserviços resilientes, mensageria assíncrona e arquiteturas cloud-native que aguentam tráfego real. Veterano de 4 Black Fridays em produção.",
+  "speaks": "Eu falo",
+  "cta1": "Ver experiência",
+  "cta2": "Falar comigo",
+  "resumeLabel": "Baixar currículo (PDF)",
+  "aboutHeading": "Sobre mim",
+  "aboutParagraphs": [
+    "Comecei no desenvolvimento de software em 2016 e hoje sou Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços.",
+    "Ampla experiência em sistemas distribuídos de alta escala, varejo digital e computação em nuvem, com foco em entregar soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio. Veterano de 4 Black Fridays em produção, sustentando sistemas críticos de e-commerce sob pico de tráfego.",
+    "Uso IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para aumentar produtividade, qualidade de código e velocidade de entrega."
+  ],
+  "aboutStats": [
+    {
+      "value": "8+",
+      "label": "anos de experiência profissional"
+    },
+    {
+      "value": "7",
+      "label": "empresas"
+    },
+    {
+      "value": "20+",
+      "label": "tecnologias no dia a dia"
+    }
+  ],
+  "experienceHeading": "Experiência",
+  "experienceSub": "Da manutenção de monólitos legados até arquiteturas de microsserviços em escala.",
+  "skillsHeading": "Skills técnicas",
+  "skillsSub": "Stack usada no dia a dia para construir sistemas escaláveis e resilientes.",
+  "languagesHeading": "Idiomas",
+  "contactHeading": "Vamos conversar",
+  "contactSub": "Aberto a novas oportunidades e projetos interessantes envolvendo sistemas distribuídos, backend, fullstack e cloud.",
+  "contactCta": "Enviar e-mail"
+}

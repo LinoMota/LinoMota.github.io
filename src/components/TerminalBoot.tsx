@@ -1,4 +1,15 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { useLanguage } from '../i18n/LanguageContext'
+
+function slugify(value: string) {
+  const combiningAccents = /[̀-ͯ]/g
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(combiningAccents, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
 
 interface BootStep {
   label: string
@@ -38,7 +49,7 @@ const BOOT_STEPS: BootStep[] = [
     label: 'Rendering components',
     task: () =>
       withTimeout(
-        Promise.all([import('./ExperienceStack'), import('./SkillsView'), import('./ContactView')]),
+        Promise.all([import('./AboutView'), import('./ExperienceView'), import('./SkillsView'), import('./ContactView')]),
         STEP_TIMEOUT_MS,
       ),
   },
@@ -48,7 +59,6 @@ const BOOT_STEPS: BootStep[] = [
   },
 ]
 
-const TYPE_LINE = '> npx lino-mota@latest init'
 const SUCCESS_LINES = ['Success! Portfolio initialized.', 'Loading language module...']
 const TYPING_SPEED_MS = 22
 const END_PAUSE_MS = 400
@@ -78,6 +88,9 @@ interface TerminalBootProps {
 }
 
 export default function TerminalBoot({ onDone }: TerminalBootProps) {
+  const { t } = useLanguage()
+  const slug = slugify(t.hero.name)
+  const typeLine = `> npx ${slug}@latest init`
   const [promptTyped, setPromptTyped] = useState(false)
   const [completedSteps, setCompletedSteps] = useState<string[]>([])
   const [stepsDone, setStepsDone] = useState(false)
@@ -131,7 +144,7 @@ export default function TerminalBoot({ onDone }: TerminalBootProps) {
         style={{ '--pixel-shadow': 'rgba(46,255,111,0.25)' } as CSSProperties}
       >
         <div className="flex items-center justify-between border-b-2 border-border px-4 py-2">
-          <span className="font-mono text-xs text-text-dim">$ lino-mota</span>
+          <span className="font-mono text-xs text-text-dim">$ {slug}</span>
           <div className="flex gap-1.5">
             <span className="h-2.5 w-2.5 border border-border bg-surface" />
             <span className="h-2.5 w-2.5 border border-border bg-surface" />
@@ -141,7 +154,7 @@ export default function TerminalBoot({ onDone }: TerminalBootProps) {
 
         <div className="min-h-[220px] px-5 py-6 font-mono text-sm">
           <p className="mb-1.5 text-text">
-            {promptTyped ? TYPE_LINE : <TypedText text={TYPE_LINE} onDone={() => setPromptTyped(true)} />}
+            {promptTyped ? typeLine : <TypedText text={typeLine} onDone={() => setPromptTyped(true)} />}
             {!promptTyped && (
               <span className="ml-0.5 inline-block animate-[texttype-blink_0.5s_ease-in-out_infinite] text-accent">|</span>
             )}

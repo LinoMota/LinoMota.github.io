@@ -1,0 +1,174 @@
+[
+  {
+    "company": "TQI",
+    "start": { "pt": "Out 2025", "en": "Oct 2025" },
+    "end": { "pt": "Presente", "en": "Present" },
+    "role": { "pt": "Senior Back-End Developer", "en": "Senior Back-End Developer" },
+    "location": { "pt": "Remoto", "en": "Remote" },
+    "bullets": {
+      "pt": [
+        "Consultoria alocada no PagBank (fintech), atuando no time de recarga de celular e serviços (gift cards), com integração a diversos parceiros e serviços transacionais de alto volume",
+        "Microsserviços em Java e Node.js com foco em escalabilidade e baixa latência",
+        "Comunicação assíncrona orientada a eventos com Apache Kafka e cache com Redis",
+        "Decisões arquiteturais para alta disponibilidade, resiliência e tolerância a falhas"
+      ],
+      "en": [
+        "Consulting engagement at PagBank (fintech), working on the mobile recharge and services team (gift cards), integrating with multiple partners and high-throughput transactional services",
+        "Microservices in Java and Node.js focused on scalability and low latency",
+        "Asynchronous event-driven communication with Apache Kafka and caching with Redis",
+        "Architectural decisions for high availability, resilience and fault tolerance"
+      ]
+    },
+    "tech": ["Java", "Node.js", "Kafka", "Redis"],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Foursales",
+    "start": { "pt": "Mai 2025", "en": "May 2025" },
+    "end": { "pt": "Out 2025", "en": "Oct 2025" },
+    "role": { "pt": "Senior Back-End Developer", "en": "Senior Back-End Developer" },
+    "location": { "pt": "Remoto", "en": "Remote" },
+    "bullets": {
+      "pt": [
+        "APIs REST de alta performance em Java 17 com Spring Boot",
+        "Eventos assíncronos via Kafka e busca otimizada com Elasticsearch",
+        "Autenticação com Keycloak (OAuth2/JWT) e Spring Security",
+        "Features de IA com Whisper (transcrição) integrado ao GPT para dados em tempo real"
+      ],
+      "en": [
+        "High-performance RESTful APIs in Java 17 with Spring Boot",
+        "Asynchronous events via Kafka and optimized search with Elasticsearch",
+        "Authentication with Keycloak (OAuth2/JWT) and Spring Security",
+        "AI-powered features with Whisper (speech-to-text) integrated with GPT for real-time data"
+      ]
+    },
+    "tech": ["Java 17", "Spring Boot", "Kafka", "Elasticsearch", "Keycloak"],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Instituto Amazon Innovare",
+    "start": { "pt": "Jan 2025", "en": "Jan 2025" },
+    "end": { "pt": "Jun 2025", "en": "Jun 2025" },
+    "role": { "pt": "Backend Developer PL", "en": "Backend Developer PL" },
+    "location": { "pt": "Manaus, Amazonas, Brasil", "en": "Manaus, Amazonas, Brazil" },
+    "bullets": {
+      "pt": [
+        "Sistema de gerenciamento de arquivos em larga escala com busca inteligente (OCR + Elasticsearch)",
+        "APIs em Node.js/TypeScript/Nest.js para grandes volumes de documentos",
+        "Pipeline de CI/CD completo com GitHub Actions, ArgoCD e Kubernetes na AWS (EKS/EC2)",
+        "Treinamentos internos sobre ferramentas DevOps e uso de Claude Code no fluxo de trabalho"
+      ],
+      "en": [
+        "Large-scale file management system with intelligent search (OCR + Elasticsearch)",
+        "APIs in Node.js/TypeScript/Nest.js for high-volume document processing",
+        "Full CI/CD pipeline with GitHub Actions, ArgoCD and Kubernetes on AWS (EKS/EC2)",
+        "Internal training on DevOps tooling and Claude Code in the development workflow"
+      ]
+    },
+    "tech": ["Node.js", "Nest.js", "Kubernetes", "ArgoCD", "AWS"],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "Americanas s.a.",
+    "start": { "pt": "Out 2022", "en": "Oct 2022" },
+    "end": { "pt": "Dez 2024", "en": "Dec 2024" },
+    "role": { "pt": "Backend Developer PL", "en": "Backend Developer PL" },
+    "location": { "pt": "Remoto", "en": "Remote" },
+    "bullets": {
+      "pt": [
+        "Arquitetura de busca e autocomplete em larga escala",
+        "Microsserviços Java com Spring e mensageria via GCP Pub/Sub, AWS Kinesis e Apache Storm",
+        "Migração de Apache Solr para Elasticsearch e gestão de MongoDB distribuído",
+        "Deploy via GitLab CI/CD em Kubernetes na AWS e GCP"
+      ],
+      "en": [
+        "Search and autocomplete architecture at scale",
+        "Java microservices with Spring and messaging via GCP Pub/Sub, AWS Kinesis and Apache Storm",
+        "Migration from Apache Solr to Elasticsearch and distributed MongoDB management",
+        "Deployment via GitLab CI/CD to Kubernetes on AWS and GCP"
+      ]
+    },
+    "tech": ["Java", "Spring", "Elasticsearch", "MongoDB", "Kubernetes"],
+    "tag": "🔥 3 Black Fridays",
+    "highlight": {
+      "pt": "Sustentação da busca sob pico de tráfego em 3 Black Fridays consecutivas, sem indisponibilidade",
+      "en": "Kept search up under peak load through 3 consecutive Black Fridays, with zero downtime"
+    }
+  },
+  {
+    "company": "Linx",
+    "start": { "pt": "Jan 2021", "en": "Jan 2021" },
+    "end": { "pt": "Out 2022", "en": "Oct 2022" },
+    "role": { "pt": "FullStack Developer", "en": "FullStack Developer" },
+    "location": { "pt": "Manaus, Amazonas, Brasil", "en": "Manaus, Amazonas, Brazil" },
+    "bullets": {
+      "pt": [
+        "SaaS B2B para gestão de vitrines de e-commerce",
+        "Microsserviços Node.js/TypeScript e mensageria assíncrona com Kafka",
+        "MongoDB, DynamoDB e cache com Redis",
+        "Frontend em Angular 2 e deploy com AWS ECR/ECS"
+      ],
+      "en": [
+        "B2B SaaS for e-commerce storefront management",
+        "Node.js/TypeScript microservices and asynchronous messaging with Kafka",
+        "MongoDB, DynamoDB and Redis caching",
+        "Angular 2 frontend and deployment with AWS ECR/ECS"
+      ]
+    },
+    "tech": ["Node.js", "TypeScript", "Kafka", "Angular", "AWS"],
+    "tag": "🔥 1 Black Friday",
+    "highlight": {
+      "pt": "Reforço na plataforma de vitrines dos clientes durante a Black Friday",
+      "en": "Reinforced clients storefront platform during Black Friday"
+    }
+  },
+  {
+    "company": "iTRIAD Research and Development",
+    "start": { "pt": "Nov 2019", "en": "Nov 2019" },
+    "end": { "pt": "Jan 2021", "en": "Jan 2021" },
+    "role": { "pt": "Junior FullStack Developer", "en": "Junior FullStack Developer" },
+    "location": { "pt": "Manaus, Amazonas, Brasil", "en": "Manaus, Amazonas, Brazil" },
+    "bullets": {
+      "pt": [
+        "Sistemas financeiros e de gestão para a Yamaha",
+        "Backend em Java 8 e Spring Boot, frontend em ExtJs",
+        "Banco de dados Oracle",
+        "Automações e web scraping com Node.js e RabbitMQ"
+      ],
+      "en": [
+        "Financial and management systems for Yamaha",
+        "Backend in Java 8 and Spring Boot, frontend in ExtJs",
+        "Oracle database",
+        "Automation and web scraping with Node.js and RabbitMQ"
+      ]
+    },
+    "tech": ["Java 8", "Spring Boot", "ExtJs", "Oracle", "RabbitMQ"],
+    "tag": null,
+    "highlight": null
+  },
+  {
+    "company": "FUCAPI",
+    "start": { "pt": "Fev 2016", "en": "Feb 2016" },
+    "end": { "pt": "Fev 2017", "en": "Feb 2017" },
+    "role": { "pt": "Fullstack Developer", "en": "Fullstack Developer" },
+    "location": { "pt": "Manacapuru, Amazonas, Brasil", "en": "Manacapuru, Amazonas, Brazil" },
+    "bullets": {
+      "pt": [
+        "Iniciativa SOFT-AM: projetos web e mobile voltados à educação",
+        "Participação do planejamento à entrega final",
+        "Boas práticas para código eficiente e de fácil manutenção"
+      ],
+      "en": [
+        "SOFT-AM initiative: web and mobile projects for education",
+        "Involved from planning through final delivery",
+        "Best practices for efficient, maintainable code"
+      ]
+    },
+    "tech": ["Web", "Mobile"],
+    "tag": null,
+    "highlight": null
+  }
+]

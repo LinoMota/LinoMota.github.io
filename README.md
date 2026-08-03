@@ -2,6 +2,8 @@
 
 Portfólio pessoal estático, bilíngue (PT/EN).
 
+![Current state](current-state.png)
+
 ## Stack
 
 - [Vite](https://vitejs.dev/) + React + TypeScript
@@ -37,4 +39,4 @@ Passos únicos no GitHub, antes do primeiro deploy:
 
 ## Conteúdo
 
-Os textos (PT/EN) ficam centralizados em [src/data/content.ts](src/data/content.ts), extraídos dos currículos em [cvs/](cvs/). Para atualizar experiências, skills ou formação, edite esse arquivo; todos os componentes consomem os dados por lá.
+Os textos (PT/EN) em [src/data/content.ts](src/data/content.ts) são gerados a partir do [src/data/site-content/](src/data/site-content/), produzido pelo subprojeto [dynamic-cv/](dynamic-cv/) - um CLI que transforma dados de currículo em PDFs localizados + conteúdo do site. Para atualizar experiências, skills ou formação, veja o [README do dynamic-cv](dynamic-cv/README.md).

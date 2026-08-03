@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-cv",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI that turns JSON resume data into localized LaTeX/PDF resumes and portfolio site-content.",
+  "bin": {
+    "dynamic-cv": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env bin/cli.js",
+    "build-cv": "node --env-file-if-exists=.env bin/cli.js build-cv",
+    "generate-input-for-cv": "node --env-file-if-exists=.env bin/cli.js generate-input-for-cv",
+    "export-to-site": "node --env-file-if-exists=.env bin/cli.js export-to-site"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.60.0",
+    "commander": "^12.1.0",
+    "prompts": "^2.4.2"
+  }
+}

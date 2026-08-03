@@ -4,8 +4,6 @@ import { useMediaQuery } from '../hooks/useMediaQuery'
 import TextType from '../reactbits/TextType'
 import ASCIIText from '../reactbits/ASCIIText'
 
-const LANGUAGE_LOCALES: Locale[] = ['pt', 'en']
-
 export default function HomeView() {
   const { t, locale, setLocale } = useLanguage()
   const isDesktop = useMediaQuery('(min-width: 768px)')
@@ -64,12 +62,12 @@ export default function HomeView() {
 
           <div className="mt-3 flex items-center gap-2">
             <span className="font-mono text-[11px] text-text-dim">{t.hero.speaks}:</span>
-            {t.education.languages.map((lang, i) => {
-              const langLocale = LANGUAGE_LOCALES[i]
+            {t.education.languages.map((lang) => {
+              const langLocale = lang.code as Locale
               const active = locale === langLocale
               return (
                 <button
-                  key={lang.name}
+                  key={lang.code}
                   onClick={() => setLocale(langLocale)}
                   className={`pixel-tag border px-2.5 py-1 font-mono text-[11px] transition-colors ${
                     active ? 'border-accent text-accent' : 'border-border text-text-dim hover:text-accent'

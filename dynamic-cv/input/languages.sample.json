@@ -1,0 +1,12 @@
+[
+  {
+    "code": "pt",
+    "label": { "pt": "Português", "en": "Portuguese" },
+    "level": { "pt": "Nativo", "en": "Native" }
+  },
+  {
+    "code": "en",
+    "label": { "pt": "Inglês", "en": "English" },
+    "level": { "pt": "Profissional Completo", "en": "Full Professional" }
+  }
+]

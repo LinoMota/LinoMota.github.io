@@ -1,0 +1,12 @@
+{
+  "name": "Lino Mota",
+  "jobTitle": "Senior Backend Engineer",
+  "location": "Manaus, Amazonas, Brazil",
+  "phone": "+55 92 98822-1173",
+  "email": "devlinomota@gmail.com",
+  "linkedin": "linkedin.com/in/lino-mota",
+  "linkedinUrl": "https://www.linkedin.com/in/lino-mota/",
+  "github": "github.com/LinoMota",
+  "githubUrl": "https://github.com/LinoMota",
+  "summary": "Senior Backend Engineer with 8 years of professional experience designing and scaling distributed systems in Java/Spring Boot and Node.js. Track record of building high-throughput, event-driven microservices (Kafka, Redis, Elasticsearch) for high-traffic retail and financial platforms, and leading migrations that cut infrastructure cost and deployment time. Graduate in Software Engineering from the Federal University of Amazonas. Regularly leverages generative AI tools (Claude, GPT, GitHub Copilot) to accelerate delivery, improve code quality, and speed up debugging."
+}

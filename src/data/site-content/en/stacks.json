@@ -1,0 +1,97 @@
+[
+  {
+    "label": "Languages",
+    "items": [
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "SQL"
+    ]
+  },
+  {
+    "label": "Frameworks",
+    "items": [
+      "Spring Boot",
+      "Node.js",
+      "Nest.js",
+      "React",
+      "Next.js",
+      "Angular",
+      "ExtJs"
+    ]
+  },
+  {
+    "label": "Databases",
+    "items": [
+      "MySQL",
+      "MongoDB",
+      "Oracle",
+      "Redis",
+      "DynamoDB"
+    ]
+  },
+  {
+    "label": "Cloud & DevOps",
+    "items": [
+      "AWS",
+      "GCP",
+      "Kubernetes",
+      "Docker",
+      "ArgoCD"
+    ]
+  },
+  {
+    "label": "Messaging",
+    "items": [
+      "Apache Kafka",
+      "RabbitMQ",
+      "AWS Kinesis",
+      "GCP PubSub",
+      "Apache Storm"
+    ]
+  },
+  {
+    "label": "Search & Analytics",
+    "items": [
+      "Elasticsearch",
+      "Apache Solr"
+    ]
+  },
+  {
+    "label": "Authentication",
+    "items": [
+      "Keycloak",
+      "OAuth2",
+      "JWT",
+      "Spring Security"
+    ]
+  },
+  {
+    "label": "Testing",
+    "items": [
+      "JUnit",
+      "Mockito",
+      "Jest"
+    ]
+  },
+  {
+    "label": "AI",
+    "items": [
+      "GPT",
+      "Claude",
+      "Gemini",
+      "GitHub Copilot",
+      "Whisper"
+    ]
+  },
+  {
+    "label": "Tools",
+    "items": [
+      "GitHub Actions",
+      "GitLab CI/CD",
+      "Grafana",
+      "Tesseract OCR"
+    ]
+  }
+]

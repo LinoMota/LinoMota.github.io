@@ -1,0 +1,21 @@
+{
+  "name": "Lino Mota",
+  "jobTitle": {
+    "pt": "Engenheiro de Software",
+    "en": "Senior Backend Engineer"
+  },
+  "location": {
+    "pt": "Manaus, Amazonas, Brasil",
+    "en": "Manaus, Amazonas, Brazil"
+  },
+  "phone": "+55 92 98822-1173",
+  "email": "devlinomota@gmail.com",
+  "linkedin": "linkedin.com/in/lino-mota",
+  "linkedinUrl": "https://www.linkedin.com/in/lino-mota/",
+  "github": "github.com/LinoMota",
+  "githubUrl": "https://github.com/LinoMota",
+  "summary": {
+    "pt": "Engenheiro de Software com 8 anos de experiência profissional, especializado em desenvolvimento backend. Graduado em Engenharia de Software pela Universidade Federal do Amazonas, com uma trajetória profissional que vai desde a manutenção de sistemas monolíticos legados até a construção de arquiteturas robustas baseadas em microsserviços. Possui ampla experiência em sistemas distribuídos de alta escala, varejo digital e computação em nuvem, com foco na entrega de soluções escaláveis, eficientes e resilientes alinhadas às necessidades do negócio. Experiência com uso de IA generativa (GPT, Claude, Gemini, GitHub Copilot) no fluxo de desenvolvimento para aumento de produtividade, qualidade de código e velocidade de entrega.",
+    "en": "Senior Backend Engineer with 8 years of professional experience designing and scaling distributed systems in Java/Spring Boot and Node.js. Track record of building high-throughput, event-driven microservices (Kafka, Redis, Elasticsearch) for high-traffic retail and financial platforms, and leading migrations that cut infrastructure cost and deployment time. Graduate in Software Engineering from the Federal University of Amazonas. Regularly leverages generative AI tools (Claude, GPT, GitHub Copilot) to accelerate delivery, improve code quality, and speed up debugging."
+  }
+}

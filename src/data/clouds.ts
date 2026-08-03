@@ -1,8 +1,11 @@
+import websiteonly from './site-content/en/websiteonly.json'
+
 export interface CloudInfo {
   name: string
   logo: string
 }
 
+// Provider display name/icon - not part of dynamic-cv's input, kept local.
 export const clouds: Record<string, CloudInfo> = {
   aws: { name: 'AWS', logo: './clouds/aws.svg' },
   gcp: { name: 'GCP', logo: './clouds/images.jpeg' },
@@ -10,10 +13,8 @@ export const clouds: Record<string, CloudInfo> = {
   kubernetes: { name: 'Kubernetes', logo: './clouds/kubernetes.png' },
 }
 
-export const companyClouds: Record<string, (keyof typeof clouds)[]> = {
-  TQI: ['aws'],
-  Foursales: ['aws'],
-  'Instituto Amazon Innovare': ['aws', 'kubernetes'],
-  'Americanas s.a.': ['aws', 'gcp', 'kubernetes'],
-  Linx: ['aws'],
-}
+// company -> cloud provider keys is not translated, so either locale's file works.
+export const companyClouds: Record<string, (keyof typeof clouds)[]> = websiteonly.companyClouds as Record<
+  string,
+  (keyof typeof clouds)[]
+>

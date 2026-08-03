@@ -1,10 +1,11 @@
 import type { CSSProperties } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { profileCard } from '../data/content'
 import ProfileCard from '../reactbits/ProfileCard'
 
 export default function ContactView() {
-  const { t } = useLanguage()
-  const githubHandle = t.contact.github.split('/').pop() ?? t.contact.github
+  const { t, locale } = useLanguage()
+  const card = profileCard[locale]
 
   return (
     <section className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-20">
@@ -18,12 +19,12 @@ export default function ContactView() {
         <ProfileCard
           name={t.hero.name}
           title={t.hero.role}
-          handle={githubHandle}
+          handle={card.handle}
           status={t.hero.location}
           contactText={t.contact.cta}
-          avatarUrl="/profile.png"
-          miniAvatarUrl="/profile.png"
-          iconUrl="/assets/demo/iconpattern.png"
+          avatarUrl={card.avatarUrl}
+          miniAvatarUrl={card.avatarUrl}
+          iconUrl={card.iconUrl}
           showUserInfo
           enableTilt
           innerGradient="linear-gradient(145deg, #1f9e4855 0%, #ffb00044 100%)"
